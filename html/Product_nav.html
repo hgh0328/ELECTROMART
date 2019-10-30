@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+
+    <style>
+        /*defult setting*/
+
+        body {
+            width: 100%;
+            background: #eee;
+            
+        }
+
+
+    </style>
+    <script>
+        $(function() {
+            $(".nav_submenu1").hide();
+            $(".nav_submenu2").hide();
+            $(".nav_submenu3").hide();
+            $(".Q_list").hide();
+            
+            $(".fa-ellipsis-h").click(function(e){
+                e.preventDefault();
+                $(".Q_list").slideToggle();
+                $(".fa-ellipsis-h").toggleClass("open");
+            });
+            
+            $(".Q_moblie").mouseenter(function(){
+                $(".nav_submenu1").show();
+                $(".fa-mobile").css({"color":"gold"});
+            });
+            $(".Q_moblie").mouseleave(function(){
+                $(".nav_submenu1").hide();
+                $(".fa-mobile").css({"color":"#fff"});
+            });
+            $(".Q_fire").mouseenter(function(){
+                $(".nav_submenu2").show();
+                $(".fa-fire").css({"color":"gold"});
+            });
+            $(".Q_fire").mouseleave(function(){
+                $(".nav_submenu2").hide();
+                $(".fa-fire").css({"color":"#fff"});
+            });
+            $(".Q_tv").mouseenter(function(){
+                $(".nav_submenu3").show();
+                $(".fa-tv").css({"color":"gold"});
+            });
+            $(".Q_tv").mouseleave(function(){
+                $(".nav_submenu3").hide();
+                $(".fa-tv").css({"color":"#fff"});
+            });
+            $(".Top_btn").click(function(e) {
+                e.preventDefault();
+                $("html, body").stop().animate({
+                    scrollTop: 0
+                }, 1000);
+            }); 
+         
+        });
+
+    </script>
+</head>
+
+<body>
+    
+    <style>
+        nav{position: fixed; top: 40%; right: 1%; background: steelblue; z-index: 9999; text-align: center; font-family: 'Roboto', sans-serif; width: 60px; line-height: 3vw; color: #fff; border-radius: 15px}
+        .fa-caret-up{background: gold; width: 100%; line-height: 3vw; transition: 0.3s; border-radius: 10px 10px 10px 10px; color: #251e1e;}
+        .fa-ellipsis-h{line-height: 3vw;}
+        nav>a{font-size: 2vw;}
+        .Q_list>li{font-size: 2vw;}
+        .fa-caret-up:hover{color: steelblue; padding-bottom: 100px;}
+        .fa-ellipsis-h:hover{color: gold;}
+        .nav_submenu1{position: fixed; right: 4.2%; top: 45.5%;color: #fff; font-size: 1vw; background: steelblue; border-radius: 15px 80px 80px 15px;  transition: 0.3s; padding-right: 4%; text-align: left; text-indent: 1vw; border-right: 10px solid gold;}
+        .nav_submenu2{position: fixed; right: 4.2%; top: 51.5%;  color: #fff; font-size: 1vw; background: steelblue; border-radius: 15px 80px 80px 15px;  transition: 0.3s; padding-right: 4%; text-align: left; text-indent: 1vw; border-right: 10px solid gold;}
+        .nav_submenu3{position: fixed; right: 4.2%; top: 57.5%;  color: #fff; font-size: 1vw; background: steelblue; border-radius: 15px 80px 80px 15px;  transition: 0.3s; padding-right: 4%; text-align: left; text-indent: 1vw; border-right: 10px solid gold;}
+        nav a{display: block; }
+        .fa-ellipsis-h{transition: 0.5s; }
+        .fa-ellipsis-h.open{transform: rotate(90deg); transition: 0.5s;}
+        .nav_submenu1 li:hover{color: gold; transition: 0.3s; }
+        .nav_submenu2 li:hover{color: gold; transition: 0.3s;}
+        .nav_submenu3 li:hover{color: gold; transition: 0.3s;}
+    </style>
+    <nav>
+      <a href="#TOP" class="Top_btn"><i class="fa fa-caret-up"></i></a>
+       <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+        <ul class="Q_list">
+            <li class="Q_moblie"><a href="../html/Product1.html"><i class="fa fa-mobile"></i></a>
+            <ul class="nav_submenu1">
+                <li><a href="../html/Product1.html#moblie">Moblie</a></li>
+                <li><a href="../html/Product1.html#DeskTop">DeskTop</a></li>
+                <li><a href="../html/Product1.html#LapTop">LAPTOP</a></li>
+            </ul></li>
+            <li  class="Q_fire"><a href="../html/Product2.html"><i class="fa fa-fire"></i></a>
+            <ul  class="nav_submenu2">
+                <li><a href="../html/Product2.html#KA_1">냉장고</a></li>
+                <li><a href="../html/Product2.html#KA_2">김치냉장고</a></li>
+                <li><a href="../html/Product2.html#KA_3">빌트인 가전</a></li>
+            </ul></li>
+            <li  class="Q_tv"><a href="../html/Product3.html"><i class="fa fa-tv"></i></a>
+            <ul  class="nav_submenu3">
+                <li><a href="../html/Product3.html#HA_1">TV&amp;Audio</a></li>
+                <li><a href="../html/Product3.html#HA_2">에어컨</a></li>
+                <li><a href="../html/Product3.html#HA_3">세탁기</a></li>
+            </ul></li>
+        </ul>
+    </nav>
+    <style>
+        @media screen and (max-width:1450px) and (min-width: 1200px) {  
+            .nav_submenu1{top: 45%; right: 5.3%;}
+            .nav_submenu2{top: 49%; right: 5.3%;}
+            .nav_submenu3{top: 54%; right: 5.3%;}
+        }
+        @media screen and (max-width:1199px) and (min-width: 1001px) {  
+            .nav_submenu1{top: 43%; right: 7.3%;}
+            .nav_submenu2{top: 46%; right: 7.3%;}
+            .nav_submenu3{top: 49%; right: 7.3%;}
+        }
+
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            nav{display: none}
+        }
+
+    </style>
+
+
+    </body>
+</html>

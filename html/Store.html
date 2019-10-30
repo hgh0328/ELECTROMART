@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../js/aos.js"></script>
+
+    <style>
+        /*defult setting*/
+        body, html{width: 100%; height: 100%; position: relative;}
+        em {font-style: normal;}
+        #wrap {max-height: 1080px;max-width: 100%;}
+        body {width: 100%;}
+        header {z-index: 9999;}
+        footer {position: relative;bottom: 0;}
+        ::-webkit-scrollbar {width: 10px;}
+        ::-webkit-scrollbar-trank {background: #0078c1;}
+        ::-webkit-scrollbar-thumb {background: #0078c1;}
+        ::-webkit-scrollbar-thumb:hover {background-color: steelblue;}
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {width: 10px;height: 10px;background: steelblue;}
+    </style>
+    <style>
+        html,body{width: 100%; height: 100%;}
+        #wrap{width: 100%; height: 100%;}
+        .Store_main{width: 100%; height: 65%; position: relative; margin: 0 auto; background: url("../images/Store/Store_bg.png") no-repeat; background-size: cover; overflow-x: hidden;}
+        .Title{position: relative; top: 150px; color: #f9f9f9; left: 5%;}
+        .Store_nav{position: relative; width: 150px;}
+        .Store_nav li{float: left; width: 33.33%; text-align: center;}
+        .Store_nav::after{content: ''; display: block; clear: both;}
+        .fa-chevron-right{font-size: 12px !important;}
+        .Title h2{font-size: 48px;}
+        .Store_Title{line-height: 20px;}
+        .Store_subTxt{width: 300px; font-size: 16px;}
+        
+        .SearchBox{position: relative; width: 100%; height: auto; margin: 0 auto; background: #fff;}
+        .SearchBar{width: 50%; margin: 0 auto; text-align: center; }
+        .SearchBar > h3{font-size: 36px; padding-top: 50px; padding-bottom: 30px;}
+        .SearchBar p{margin-top: 20px; font-size: 20px;}
+        
+        #value{
+          position: relative;
+          border: none;
+          border-bottom: 3px solid #9d9d9d;
+          padding: 10px;
+          font-size: 18px;
+          line-height: 10px;
+          width: 70%;
+          border-radius: 3px;
+          color: #251212;
+        }
+        #value:focus{
+          outline: none;
+        }
+        #value::placeholder{color: steelblue; font-size: 19px;}
+        .fa-searchengin{font-size: 36px; position: absolute; top: 132px; left: 66%;}
+        .Search_List{ 
+          position: relative; width: 100%;
+          margin: 0 auto;
+          background: #f9f9f9;
+          padding: 1%;
+          height: 200px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          margin-top: 30px;
+        }
+        .fa-map-pin{color: gold;}
+        .item{
+          margin: 1% 0px 0px 0px;
+          display: flex;
+          align-items: center;
+        }
+        .icon{
+          width: 35px;
+          height: 35px;
+          background: #f9f9f9;
+          font-size: 15px;
+          text-align: center;
+          line-height: 35px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+        .Search_List .name{
+          font-size: 20px;
+
+        }
+        .fa-toggle-off{display: none; position: absolute;line-height: 40px;}
+        .fa-toggle-on{display: none; position: absolute; line-height: 40px; color: steelblue;}
+        .help{position: relative; width: 100%; height: auto; text-align: center; margin: 0 auto; margin-top: 100px;}
+        .help i{cursor: pointer;}
+        .help h3{font-size: 36px;}
+        .help > div{float: left; width: 33.33%; margin-top: 50px; text-align: left; border-right: 1px solid #525252; height: 500px; display: block;}
+        .help:after{content: ''; display: block; clear: both;}
+        .online{position: relative; width: 100%;}
+        .online .fa-toggle-off{left: 80%;}
+        .online .fa-toggle-on{left: 80%;}
+        .call{position: relative; width: 100%;}
+        .call .fa-toggle-off{left: 85%;}
+        .call .fa-toggle-on{left: 85%;}
+        .visit{position: relative; width: 100%;}
+        .visit .fa-toggle-off{left: 85%;}
+        .visit .fa-toggle-on{left: 85%;}
+        .help h4{font-size: 30px; text-indent: 50px;}
+        .help ul{margin-top: 30px;}
+        .help ul li h5{line-height: 50px; font-size: 20px; text-indent: 50px;}
+        .help ul li p{font-size: 16px; padding-left: 50px;}
+        
+        .help2{position: relative; width: 100%; text-align: center; margin: 0 auto; margin-top: 100px;}
+        .help2 h3{font-size: 36px; margin-bottom: 80px;}
+        .help2 > div{float: left; width: 33.33%; margin-top: 50px; text-align: left; height: 200px; position: relative; margin: 0 auto;}
+        .help2:after{content: ''; display: block; clear: both;}
+        .help2 h4{font-size: 20px; padding-left: 100px;}
+        .help2 p{font-size: 16px; width: 60%; padding-left: 100px; margin-top: 20px;}
+        .help2 i{position: absolute; right: 150px; font-size: 36px; transition: 0.3s; cursor: pointer;}
+        .help2 i:hover{color: steelblue; transition: 0.2s; transform: scale(1.1);}
+        
+        .help3{position: relative; width: 100%; text-align: center; margin: 0 auto; margin-top: 80px;}
+        .help3 h3{font-size: 36px; margin-bottom: 50px;}
+        
+        
+    </style>
+    <style>
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+            .Store_main{height: 50%;}
+            .Title{top: 180px;}
+            .SearchBar{width: 100%;}
+            #value::placeholder{font-size: 18px;}
+            .SearchBar p{font-size: 17px;}
+            .item{margin: 2.5% 0px 0px 0px;}
+            .fa-searchengin{font-size: 36px; position: absolute; top: 132px; left: 82%;}
+            .SearchBar p{font-size: 16px;}
+            .help > div{width: 100%; height: auto; border: none;}            
+            .fa-toggle-off{display: inline;}
+            .fa-toggle-on{display: inline;}
+            .help h4{text-indent: 50px;}
+            .help ul li h5{text-indent: 50px;}
+            .help ul li p{text-indent: 0px; padding-left: 50px;}
+            .help ul{display: none;}
+            .online .fa-toggle-off{left: 85%;}
+            .online .fa-toggle-on{left: 85%;}
+            .help2 h4{font-size: 20px; padding-left: 70px;}
+            .help2 p{font-size: 16px; width: 70%; padding-left: 70px;}
+            .help2 i{position: absolute; right: 60px; font-size: 36px;}
+         
+        }
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            .Store_main{height: 50%; background-position: 40% 0%;}
+            .SearchBar{width: 100%;}
+            .name{font-size: 17px;}
+            #value::placeholder{font-size: 16px;}
+            .SearchBar p{font-size: 16px;}
+            .item{margin: 3.5% 0px 0px 0px;}
+            .fa-searchengin{font-size: 36px; position: absolute; top: 132px; left: 80%;}
+            
+            
+            .help > div{width: 100%; height: auto; border: none;}            
+            .fa-toggle-off{display: inline; font-size: 32px; line-height: 25px;}
+            .fa-toggle-on{display: inline; font-size: 32px; line-height: 25px;}
+            .help h4{text-indent: 30px; font-size: 24px;}
+            .help ul li h5{text-indent: 30px;}
+            .help ul li p{text-indent: 0px; padding-left: 30px; font-size: 13px;}
+            .help ul{display: none;}
+            .online .fa-toggle-off{left: 85%;}
+            .online .fa-toggle-on{left: 85%;}
+            .help2 > div{width: 50%;}
+            .help2 h4{font-size: 18px; text-align: center; width: 100%; padding: 0;}
+            .help2 p{display: none;}
+            .help2 i{position: absolute; right: 40%; top: 80px; font-size: 36px;}
+        }
+    </style>
+    <script>
+        $(function() {
+            $("header").load("header.html");
+            $("#board").load("board.html");
+            $("footer").load("footer.html");
+        
+            
+        $(".online h4").click(function(){
+            $(".online .fas").toggleClass("fa-toggle-off");
+            $(".online .fas").toggleClass("fa-toggle-on");
+            $(".online ul").slideToggle();
+        });
+        $(".call h4").click(function(){
+            $(".call .fas").toggleClass("fa-toggle-off");
+            $(".call .fas").toggleClass("fa-toggle-on");
+            $(".call ul").slideToggle();
+        });
+        $(".visit h4").click(function(){
+            $(".visit .fas").toggleClass("fa-toggle-off");
+            $(".visit .fas").toggleClass("fa-toggle-on");
+            $(".visit ul").slideToggle();
+        });
+            
+         });
+        
+        function filter(){
+        var value, name, item, i;
+        value = document.getElementById("value").value.toUpperCase();
+        item = document.getElementsByClassName("item");
+        for(i=0;i<item.length;i++){
+          name = item[i].getElementsByClassName("name");
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      };
+      
+    </script>
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div id="wrap">
+        <header></header>
+        <div class="Store_main">
+             <div class="aos-item Title">
+                <ul class="Store_nav" data-aos="fade-right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./Store.html">Store</a></li>
+                                       
+                </ul>
+                <h2 class="aos-item__inner" data-aos="fade-right"><a href="./Store.html">STORE</a></h2>
+                <p class="aos-item__inner Store_Title" data-aos="fade-right">
+                Custom Service</p><br>
+                <p class="aos-item__inner Store_subTxt" data-aos="fade-right">
+                  스마트하게 사는 새로운 방법을 평범함을 넘어
+                  미래로 한발 더 다가가세요.</p>
+            </div>
+        </div>
+        <div class="SearchBox" id="Store1">
+                <div class="SearchBar">
+                    <h3>매장찾기</h3>
+                    <input type="text" onkeyup="filter()" id="value" placeholder="가까운 매장 위치와 정보를 찾으실 수 있습니다."><i class="fab fa-searchengin"></i>
+                    <p>주소 또는 매장명을 입력하세요. 예)강남구, 목동점</p>
+                </div>
+                <div class="Search_List">
+                   <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">가든 5점<br>서울특별시 송파구 충민로 10 가든파이브점 지하 1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">논현점<br>서울특별시 강남구 강남대로 512</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">명일점<br>서울특별시 강동구 고덕로276 이마트 명일점 5층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">미아점<br>서울특별시 성북구 도봉로 17 이마트 미아점 5층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">영등포 타임스퀘어점<br>서울특별시 영등포구 영중로 15</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">왕십리점<br>서울특별시 성동구 왕십리광장로 17 이마트 왕십리점 3층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">은평점<br>서울특별시 은평구 은평로 111 이마트 은평점 7층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">자양점<br>서울특별시 광진구 아차산로 272 이마트 자양점 지하 1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">고잔점<br>경기도 안산시 단원구 원포공원1로 46 이마트 고잔점 3층
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">김포점<br>경기도 김포시 풍무동 16-10 트레이더스 김포점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">다산점<br>경기도 남양주시 도농로24 이마트 다산점 지하 1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">동탄점<br>경기도 화성시 동탄 중앙로 376 이마트 동탄점 3층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">서수원점<br>경기도 수원시 권선구 수인로 291 이마트 서수원점 3층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">수원점<br>경기도 수원시 권선구 경수대로 270 이마트 수원점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">스타필드 하남점<br>경기도 하남시 미사대로 750 스타필드 하남 1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">스타필드 부천점<br>경기도 부천시 옥길동 768 3층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">의왕점<br>경기도 의왕시 효행로 34 이마트 의왕점 지하1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">죽전점<br>경기도 용인시 수지구 포은대로 552 이마트 죽전점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">중동점<br>경기도 부천시 원미구 석천로 188 이마트 중동점 1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">킨텍스점<br>경기도 고양시 일산서구 킨텍스로 171 이마트타운 지하 1층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">김해점<br>경상남도 김해시 김해대로 2232 이마트 김해점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">센텀점<br>부산광역시 해운대구 센텀4로 15 센텀시티몰 지하 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">울산점<br>울산광역시 남구 남중로 48 이마트 울산점 3층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">대구점<br>대구광역시 동구 동부로 149 신세계백화점 6층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">월배점<br>대구광역시 달서구 진천로92 이마트 월배점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">대전점<br>대전광역시 동구 동서대로1689 대전복합터미널 4층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">청주점<br>충청북도 청주시 서원구 청남로 1853 이마트 청주점 3층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">목포점<br>전남 목포시 옥암로138 이마트 목포점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">진주점<br>경상남도 진주시 진양호로 477 이마트 진주점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">전주점<br>전라북도 전주시 완산구 당산로 111 이마트 전주점 2층</span>
+                    </div>
+                    <div class="item">
+                        <span class="icon"><i class="fas fa-map-pin"></i></span>
+                        <span class="name">신제주점<br>제주특별자치도 제주시 노형동 919 이마트 신제주점 2층</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help" id="Store2">
+                <h3>문의하기</h3>
+                <div class="online">
+                <h4>온라인 상담 <i class="fas fa-toggle-off"></i></h4>
+                <ul>
+                    <li><h5>컴퓨터 온라인 상담</h5><p>컴퓨터 제품에 대한 온라인 채팅 상담을 하실 수 있습니다.</p></li>
+                    <li><h5>이메일 상담</h5><p>이메일로 상담하실 수 있습니다.</p></li>
+                    <li><h5>원격 상담</h5><p>TV, 스마트폰, PC제품에 대한 원격 서비스를 받으실 수 있습니다.</p></li>
+                    <li><h5>FAQ</h5><p>ELECTRO.COM 관련 FAQ를 확인해보세요.</p></li>
+                    <li><h5>보안신고센터</h5><p>ELECTRO의 기술 및 경영정보 유출과 관련된 제보를 접수하실 수 있습니다.</p></li>
+                    
+                </ul>
+                </div>
+                <div class="call">
+                <h4>전화 상담 <i class="fas fa-toggle-off"></i></h4>
+                <ul>
+                    <li><h5>1588-4982 일반상담</h5><p>월~금요일(오전9시 ~ 오후6시) 토요일(오전9시 ~ 오후2시)</p></li>
+                    <li><h5>전화 상담 예약</h5><p>원하는 시간대에 전화 상담을 받으실 수 있습니다.</p></li>
+                </ul>
+                </div>
+                <div class="visit">
+                <h4>방문 상담 <i class="fas fa-toggle-off"></i></h4>
+                <ul>
+                    <li><h5>서비스센터 찾기</h5><p>가까운 서비스센터 위치와 정보를 찾으실 수 있습니다.</p></li>
+                    <li><h5>센터 방문 예약</h5><p>방문예약으로 기다실 필요 없이 원하는 시간에 서비스를 받으실 수 있습니다.</p></li>
+                    <li><h5>출장 서비스 예약</h5><p>원하시는 시간대에 수리기사님이 방문해서 서비스를 제공해드립니다.</p></li>
+                    <li><h5>제품 이전설치 안내</h5><p>ELECTRO 제품을 보유한 고객이 이사 및 재설치 요청시 전문설치팀이 고객님 댁에 직접
+                                                방문하여 이전설치, 재설치, 철거 해주는 유상 서비스입니다.</p></li>
+                </ul>
+                </div>
+            </div>
+            
+            <div class="help2" id="Store3">
+                <h3>서비스 센터</h3>
+                <div class="help2_1"><h4>워런티</h4><i class="fas fa-boxes"></i><p>제품별 보증 기간 및 내용</p></div>
+                <div class="help2_2"><h4>윈도우 업데이트 정보</h4><i class="fas fa-wrench"></i><p>Windows 업데이트 안내</p></div>
+                <div class="help2_3"><h4>ELECTRO Flow</h4><i class="fas fa-share-alt"></i><p>PC 로그인, 모바일 핫스팟 연결 및 모바일 알림 동기화 기능을 간편하게 사용하실 수 있습니다.</p></div>
+                <div class="help2_4"><h4>Windows 10 지원 모델 정보</h4><i class="fab fa-windows"></i><p>모델정보와 설치안내</p></div>
+                <div class="help2_5"><h4>Windows 7 지원 모델 정보</h4><i class="fab fa-windows"></i><p>모델정보와 설치안내</p></div>
+                <div class="help2_6"><h4>노트 PC 국제 보증</h4><i class="fas fa-shield-alt"></i><p>해외에서도 노트 PC 서비스가 제공됩니다.</p></div>
+                <div class="help2_7"><h4>이용약관 / 개인정보처리방침</h4><i class="fas fa-chalkboard-teacher"></i><p>스마트TV 서비스 이용약관 및 개인정보 처리방침을 확인하실 수 있습니다.</p></div>
+                <div class="help2_8"><h4>SmartELECTRO FAQ</h4><i class="far fa-question-circle"></i><p>SmartELECTRO를 이용한 기기 연결방법 및 앱 사용방법을 확인하실 수 있습니다.</p></div>
+                <div class="help2_9"><h4>ELETRO멤버스 커뮤니티</h4><i class="fas fa-comments"></i><p>커뮤니티에서 다른 갤럭시 사용자들의 스마트폰 활용법, 리뷰를 둘러보고, 당신의 아이디어도 공유하세요.</p></div>
+            </div>
+            <div class="help3" id="Stroe4">
+                <h3>고객지원</h3>
+                
+                <div id="board"></div>
+            </div>
+        
+        
+        
+        
+
+
+
+
+        <!--footer-->
+        <footer></footer>
+    </div>
+    
+
+
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+        $(function() {});
+
+    </script>
+
+
+</body>
+
+</html>

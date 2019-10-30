@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>main_header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
+
+    <style>
+        .KR{font-family: 'Roboto', sans-serif; font-weight: bold;}
+        
+        header{position: absolute; width: 100%; margin: 0 auto; text-align: center; background: none; height: 120px; transition: 0.5s; font-family: 'PT Sans', sans-serif;}
+        header>h1{width: 300px; position: relative; top: 30px; transition: 0.5s; overflow: hidden; margin-left: 2%;}
+        .h_mainmenu {width: 80%; position: relative; left: 18%; bottom: 20px; transition: 0.5s; color: #fff;}
+        .h_mainmenu>li{float: left; width: 20%;}
+        .main_title{font-size: 1.3vw;}
+        .h_Submenu li{font-size: 1vw;}
+        .h_mainmenu:after{display: block; clear: both; content: ''; }
+        .h_Submenu{position: relative; width: 100%; left: 0; box-sizing: border-box; z-index: 1; line-height: 30px}
+        .h_Submenu li{width: 100%;  padding-top: 20px;color: #251e1e;}
+        .h_Submenu li:first-child a{display: inline-block; border-top: 4px solid #9d9d9d; padding-top: 20px; display: inline-block; transition: 0.3s;}
+        .h_Submenu li:hover{color: #0078c1; }
+        .h_mainmenu li:hover .h_Submenu li:first-child a{ 
+        display: block; 
+        border-top: 4px solid #0078c1; 
+        padding-top: 20px;
+        transition: 0.3s;
+        }
+        
+        .h_lnb{position: absolute; right: 0%;  top: 45px; width: 19%;}
+        .h_lnb ul li{float: left; width: 33.33%; font-size: 1.2vw;}
+        .h_lnb:after{content: ''; display: block; clear: both;}
+        .h_lnb select{
+            text-align: center;
+            color: #fff; 
+            border: 2px solid #251e1e;
+            border-radius: 10px;
+            padding: 1px 0px 1px 3%;
+            background: none; 
+            font-size: 1.1vw;
+            line-height: 15px;
+            font-family: 'PT Sans', sans-serif;
+            width: 60%;
+            border-color: #fff;
+        }
+        .h_lnb select option{
+            text-align: center;
+            color: #251e1e; 
+            font-family: 'PT Sans', sans-serif;
+            width: 60%;
+            background-color: #eee;
+            border: none;
+            
+        }
+        
+        
+        .moblie_h_menu{position: absolute; right: 0; top: 20px; z-index: 2; display: none; transition: 0.5s;}
+        .moblie_h_menu>ul>li{float: left; width: 100%; padding: 30px; transition: 0.5s;}
+        .moblie_menu{display: none; position: absolute; width: 100%; top: 100%; font-size: 5vw; transition: 0.5s;}
+        
+        .h_mobliemenu>li{padding-top: 10px; background: #eee; font-size: 4vw; border-bottom: 1px solid #525252}
+        .h_mobliemenu:first-child{border-top: 3px solid #0078c1;}
+        .h_mobliemenu>li:last-child{border-bottom: 3px solid #0078c1;}
+        .m_Submenu{background: #fff; line-height: 300%; font-size: 3vw; text-align: left; text-indent: 50px; border-bottom: 1px solid #525252;}
+        .m_Submenu li{border-bottom: 0.1px solid #eee;}
+        .login_btn{color: #fff;}
+        
+        
+        .search_box{display: none; width: 100%;position: absolute; right: 0;  background: #fff; border: 1px solid #5252; top: 100%;  z-index: 10; height: 200px; background: #eee; border-top: 3px solid #0078c1}  
+        .search_b_t{padding: 10px; padding-top: 120px;}
+        .search_b_w{position: relative; width: 100%;}
+        .search_b_t .title {
+            line-height: 35px;
+            font-size: 2vw;
+            font-weight: bold;
+            position: absolute;
+            left: 44%;
+            bottom: 200%;
+            letter-spacing: 10px;
+
+        }
+        .search_b_t .input_w{margin-left: 0%; margin-right:5%;}
+        .search_b_t .input_w input {
+            width: 80%;
+            height: 35px;
+            border: 1px solid #5252;
+            padding: 0 10px;
+            border: 2px solid #0078c1;
+            border-radius: 7px 0px 0px 7px;
+        }
+        .search_b_t .input_bt {position: absolute;right: 11.5%;top: 0%; background: #0078c1; padding-left: 1%; padding-right: 1%; color: #fff; font-size: 1vw; border-radius: 0px 7px 7px 0px; height: 35px; line-height: 35px; font-weight: bold; cursor: pointer;}
+        
+        /*아이콘*/
+        .fa-bars{color: #fff; font-size: 35px; position: absolute; right: 25%; top: 32%;}
+        .fa-times{color: #0078c1; font-size: 40px; position: absolute; right: 25%; top: 28%;}
+        .fa-search{color: #fff; font-size: 25px;}
+        .fa-search.on{color: #0078c1; font-size: 25px;}
+        
+        header.open{background: #eee;}
+        .m_Submenu li a:hover{color: #0078c1;}
+        
+        
+        
+        
+        @media screen and (max-width:1350px) and (min-width: 1001px){
+            .h_Submenu li:first-child a{display: block;}
+            header h1{width: 100%; position: relative; top: 30px; transition:all 0.5s; margin-left: 0%;}
+            .h_mainmenu{ transition: 0.5s; display: block; width: 100%; position: relative; margin-top: 70px; left: 0%;}
+            .h_mainmenu>li{width: 25%; transition: 0.5s;}
+            .h_lnb{ top: 57px;}
+            .moblie_h_menu{display: block; top: 11px;}
+            .search_box{margin-top: 0%;}            
+            .search_b_t .title{font-size: 4vw; left: 40%;}
+            .search_b_t .input_bt{font-size: 2vw;}
+            #Langage{font-size: 1.3vw; width: 60px; margin-right: 10%;}
+            .login_btn{font-size: 1.5vw;}
+            .moblie_hide{display: none;}
+            .main_title{font-size: 1.8vw;}
+        .h_Submenu li{font-size: 1.5vw;}
+            
+        }
+        @media screen and (max-width:1000px) and (min-width:300px){
+            .moblie_menu{display: block; position: absolute; top: 320px;}
+             .h_mainmenu{display: none; transition: 0.5s;}
+            header h1{position: relative; width: 50%; transition:all 0.5s; margin-left: 4%;}
+             .h_lnb{right: 1%; top: 47px;}
+            .moblie_hide{display: none;}
+            .moblie_h_menu{display: block; padding: 0px; top: 2.5%; transition: 0.5s; right: 0%;}
+            .search_box{top: 100%;}
+            .search_b_t .title{font-size: 4vw; left: 40%;}
+            .search_b_t .input_bt{font-size: 2.5vw; padding-left: 30px; padding-right: 30px;}
+            #Langage{font-size: 2.8vw; width: 50%; margin-right: 50%; position: absolute; right: 80%;}
+            .login_btn{font-size: 3vw; position: absolute; right: 75%; line-height: 5vw; z-index: 999;}
+
+        }
+        
+        
+    </style>
+    <script>
+        $(function() {
+            $(".moblie_show").show(); 
+            $(".fa-times").hide(); 
+                    
+            $(".searchBtn").click(function(){
+                $(".search_box").slideToggle(500);
+                $(".fa-search").toggleClass("on");
+            });           
+                  
+                       
+            $(".h_mobliemenu").hide();
+            
+            $(".bar_click").click(function(){
+                $(".fa-bars").fadeToggle(500);
+                $(".fa-times").fadeToggle(500);
+                $(".h_mobliemenu").slideToggle(500);
+                $(".search_box").slideToggle(500);
+                $(".moblie_show").fadeToggle(500);
+                $("header").toggleClass("open");
+            });
+            
+            $(".m_Submenu").hide();
+            
+            
+            var menu = $(".h_mobliemenu>li"); 
+            
+              menu.click(function() {
+                
+                  
+                  var tg = $(this);
+                  var i = tg.index();
+                  
+                  if(i == 0){
+                      $(".m_Submenu").eq(0).slideToggle(500);
+                      $(".m_Submenu").eq(1).slideUp(500);
+                      $(".m_Submenu").eq(2).slideUp(500);
+                      $(".m_Submenu").eq(3).slideUp(500);
+                      
+                  }
+                  else if(i == 1){
+                      $(".m_Submenu").eq(1).slideToggle(500);
+                      $(".m_Submenu").eq(0).slideUp(500);
+                      $(".m_Submenu").eq(2).slideUp(500);
+                      $(".m_Submenu").eq(3).slideUp(500);
+                  }
+                  else if(i == 2){
+                      $(".m_Submenu").eq(2).slideToggle(500);
+                      $(".m_Submenu").eq(0).slideUp(500);
+                      $(".m_Submenu").eq(1).slideUp(500);
+                      $(".m_Submenu").eq(3).slideUp(500);
+                  }
+                  else if(i == 3){
+                      $(".m_Submenu").eq(3).slideToggle(500);
+                      $(".m_Submenu").eq(0).slideUp(500);
+                      $(".m_Submenu").eq(1).slideUp(500);
+                      $(".m_Submenu").eq(2).slideUp(500);
+                  } 
+                  
+                });
+            
+            
+            $(".h_Submenu").hide();            
+            
+            $(".h_mainmenu li").mouseenter(function(){
+                $("header>h1>a>img").css({"opacity":"0.5","transition":"0.5s"});
+                $("header>h1>a>img").attr({src:"../images/header/logo_hover.png",alt:"hover_logo"});
+                $("header>h1>a>img").css({"opacity":"1","transition":"0.5s"});
+                $(".h_mainmenu>li").css({"color":"#251e1e","transition":"0.5s"});
+                $(".h_lnb select").css({"color":"#251e1e","transition":"0.5s","border-color":"#251e1e"});
+                $(".login_btn").css({"color":"#251e1e","transition":"0.5s"});
+                $(".fa-bars").css({"color":"#251e1e","transition":"0.5s"});
+                $(".fa-search").css({"color":"#251e1e","transition":"0.5s"});
+                $(".h_Submenu").stop().slideDown(500);
+                $("header").css({"height":"450px","background-color":"#eee"});
+                
+            });
+            $(".h_mainmenu li").mouseleave(function(){
+                $(".h_mainmenu>li").css({"color":"#fff","transition":"0.5s"});
+                $(".h_lnb select").css({"color":"#fff","transition":"0.5s","border-color":"#fff"});
+                $(".login_btn").css({"color":"#fff","transition":"0.5s",});
+                $(".fa-bars").css({"color":"#fff","transition":"0.5s",});
+                $(".fa-search").css({"color":"#fff","transition":"0.5s",});
+                 $("header>h1>a>img").attr({src:"../images/header/logo.png",alt:"defult_logo"});
+                $(".h_Submenu").stop().slideUp(500);
+                $("header").css({"height":"120px","background":"none"});
+               
+            });
+            
+            $(".moblie").mouseenter(function(){
+                $("header>h1>a>img").css({"opacity":"0.5","transition":"0.5s"});
+                $("header>h1>a>img").attr({src:"../images/header/logo_hover.png",alt:"hover_logo"});
+                $("header>h1>a>img").css({"opacity":"1","transition":"0.5s"});   
+            });
+            $(".moblie").mouseleave(function(){
+                 $("header>h1>a>img").attr({src:"../images/header/logo.png",alt:"defult_logo"});             
+            });
+            $(".login_btn").mouseenter(function(){
+                $(".login_btn").css({"color":"#0078c1"});
+            });
+            $(".login_btn").mouseleave(function(){
+                $(".login_btn").css({"color":"#fff"});
+            });
+            
+            
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="../index.html"><img src="../images/header/logo.png" alt="로고"></a></h1>
+        <div class="h_gnb">
+            <ul class="h_mainmenu">
+                <li class="main_title"><a href="../html/About.html" class="main_title">ABOUT</a>
+                <ul class="h_Submenu">
+                    <li><a href="../html/About.html" class="main_title">Company</a></li>
+                </ul></li>
+                <li class="main_title"><a href="../html/Product1.html">PRODUCT</a>
+                <ul class="h_Submenu KR">
+                    <li><a href="../html/Product1.html">Mobile &amp; Desktop</a></li>
+                    <li><a href="../html/Product2.html">주방가전</a></li>
+                    <li><a href="../html/Product3.html">생활가전</a></li>
+                </ul></li>
+                <li class="main_title"><a href="../html/Event.html" class="main_title">EVENT</a>
+                <ul class="h_Submenu KR">
+                    <li><a href="../html/Event.html#Bonus">구매혜택</a></li>
+                    <li><a href="../html/Event.html#Entry">이벤트응모</a></li>
+                    <li><a href="../html/Event.html#Enjoy">체험단응모</a></li>
+                </ul></li>
+                <li class="main_title"><a href="../html/Store.html" class="main_title">STORE</a>
+                <ul class="h_Submenu KR">
+                    <li><a href="../html/Store.html#Store1">매장찾기</a></li>
+                    <li><a href="../html/Store.html#Store2">상담예약</a></li>
+                    <li><a href="../html/Store.html#Store3">서비스센터</a></li>
+                    <li><a href="../html/Store.html#Store4">고객지원</a></li>
+                </ul></li>                
+            </ul>            
+        </div>
+        <div class="h_lnb">
+            <ul>
+                <li>
+                    <select name="KOR" id="Langage" class="moblie_show moblie">
+                        <option value="KR">KR</option>
+                        <option value="EN">EN</option>
+                        <option value="CA">CA</option>
+                    </select>
+                </li>
+                <li><a href="../html/Login.html" class="login_btn moblie_show moblie">Login</a></li>
+                <li><a href="#"><i class="fa fa-search searchBtn moblie_hide"></i></a></li>
+            </ul>
+        </div>
+        <div class="moblie_h_menu moblie">
+            <ul>
+                <li><i class="bar_icon fa fa-bars bar_click"></i></li>
+                <li><i class="bar_icon fa fa-times bar_click"></i></li>
+            </ul>
+        </div>
+        <div class="moblie_menu moblie">
+            <ul class="h_mobliemenu">
+                <li>ABOUT
+                <ul class="m_Submenu">
+                    <li><a href="../html/About.html">Company</a></li>
+                </ul></li>
+                <li>PRODUCT
+                <ul class="m_Submenu KR">
+                    <li><a href="../html/Product1.html">Mobile &amp; Desktop</a></li>
+                    <li><a href="../html/Product2.html">주방가전</a></li>
+                    <li><a href="../html/Product3.html">생활가전</a></li>
+                </ul></li>
+                <li>EVENT
+                <ul class="m_Submenu KR">
+                    <li><a href="../html/Event.html#Bonus">구매혜택</a></li>
+                    <li><a href="../html/Event.html#Entry">이벤트응모</a></li>
+                    <li><a href="../html/Event.html#Enjoy">체험단응모</a></li>
+                </ul></li>
+                <li>STORE
+                <ul class="m_Submenu KR">
+                    <li><a href="../html/Store.html#Store1">매장찾기</a></li>
+                    <li><a href="../html/Store.html#Store2">상담예약</a></li>
+                    <li><a href="../html/Store.html#Store3">서비스센터</a></li>
+                    <li><a href="../html/Store.html#Store4">고객지원</a></li>
+                </ul></li>                
+            </ul>       
+        </div>
+        <div class="search_box moblie">
+        <div class="search_b_t">
+            <div class="search_b_w">
+                <div class="title">제품검색</div>
+                <form action="#">
+                    <div class="input_w"><input type="text" placeholder="제품명 입력"></div>
+                    <div class="input_bt KR">검색</div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+
+</body></html>

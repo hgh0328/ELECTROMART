@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>main_footer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        footer {
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            height: 220px;
+            background: #303030;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .Footer_sitemap {
+            width: 100%;
+            color: #fff;
+            padding-top: 1%;
+            text-align: center;
+        }
+
+        .Footer_txt {
+            width: 100%;
+            color: #fff;
+        }
+
+        .Fmenu {
+            width: 50%;
+        }
+
+        .Fmenu>li {
+            float: left;
+            width: 25%;
+            font-weight: bold;
+            font-size: 1vw;
+        }
+
+        .Fmenu>li:last-child {
+            border-right: 2px solid #fff
+        }
+
+        .FsubMenu>li {
+            margin-top: 5%;
+            font-weight: normal;
+        }
+
+        .Fmenu::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        .Footer_logo {
+            width: 7%;
+            position: absolute;
+            right: 39%;
+            top: 10%;
+        }
+
+        .Footer_txt {
+            position: absolute;
+            right: 0%;
+            top: 15%;
+            width: 50%;
+            text-align: center;
+        }
+        .Footer_sns{
+            position: absolute; left: 70%;
+        }
+        .Footer_list{
+            position: absolute; left: 28%; margin-top: 10px; font-size: 1vw;
+            background: #eee; padding: 0px 10% 0px 10%; border-radius: 6px;
+            color: #303030;
+            line-height: 1.5vw;
+            z-index: 999;
+            letter-spacing: 1px
+        }
+        .Footer_sns>li{width: 100%; font-size: 2vw; transition: 0.5s;}
+        .copyRight{position: absolute; right: 5.5%; top: 140px; width: 100%; font-size: 1vw; transition: 0.3s;}
+        .Footer_SubList{display: none; background: #eee; z-index: 9999; padding-top: 10%;}
+        .Footer_SubList>li{padding-top: 5%; cursor: pointer;}
+        .defult_txt{cursor: pointer;}
+        .Footer_address{position: absolute; top: 55px; left: 29%; font-size: 1vw; transition: 0.3s;}
+        .Footer_address a:hover{color: #0078c1; transition: 0.3s; font-weight: bold}
+        .Footer_SubList>li:hover{color: #0078c1; font-weight: bold; transition: 0.3s;}
+        .defult_txt.onview{color: #0078c1; background: #eee; transition: 0.3s;}
+        .defult_txt:hover{color: #0078c1; background: #eee; transition: 0.3s;}
+        .Fmenu>li a:hover{color: #0078c1; transition: 0.3s;}
+        .FsubMenu>li a:hover{color: #fdd22b; transition: 0.3s;}
+        .fa-cc-paypal:hover{color: #0078c1; transition: 0.3s;}
+        .fa-cc-visa:hover{color: #fdd22b; transition: 0.3s;}
+        .fa-cc-mastercard:hover{color: crimson; transition: 0.3s;}
+        
+        
+         @media screen and (max-width:1350px) and (min-width: 1001px){
+             footer{height: 180px;}
+             .copyRight{top: 100px;}
+             .Footer_address{left: 29%; top: 30px;}
+             .Footer_sns{left: 85%;}
+             
+            }
+         @media screen and (max-width:1000px) and (min-width:300px){
+             footer{height: 100px;}
+             .copyRight{top: 56px; left: 0.1%;}
+             .Footer_address{right: 19%; letter-spacing: -0.7px}
+             .Footer_sns{left: 90%;}
+             .Footer_list{padding: 0px 5% 0px 5%; left: 37%; top: -5px;}
+             .Footer_address{left: 20%; top: 25px;}
+            }
+
+    </style>
+    <!-- Link Swiper's CSS -->
+
+
+    <!-- Demo styles -->
+    <script>
+ $(function() {
+     
+     $(".defult_txt").click(function(){
+         $(".Footer_SubList").slideToggle();
+         $(".defult_txt").toggleClass("onview");
+     });
+     
+          
+         });
+    </script>
+</head>
+
+<body>
+
+    <footer>
+        <div class="Footer_sitemap">
+            <ul class="Fmenu">
+                <li><a href="#">About</a>
+                    <ul class="FsubMenu">
+                        <li><a href="#">company</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/Product1.html">product</a>
+                    <ul class="FsubMenu">
+                        <li><a href="../html/Product1.html">모바일/데스크탑</a></li>
+                        <li><a href="../html/Product2.html">주방가전</a></li>
+                        <li><a href="../html/Product3.html">생활가전</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/Event.html">Event</a>
+                    <ul class="FsubMenu">
+                        <li><a href="../html/Event.html#Bouns">구매혜택</a></li>
+                        <li><a href="../html/Event.html#Entry">이벤트응모</a></li>
+                        <li><a href="../html/Event.html#Enjoy">체험단응모</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Store</a>
+                    <ul class="FsubMenu">
+                        <li><a href="#">매장찾기</a></li>
+                        <li><a href="#">상담예약</a></li>
+                        <li><a href="#">서비스센터</a></li>
+                        <li><a href="#">고객지원</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="Footer_logo"><img src="../images/footer/footer_logo.png" alt="footerLogo"></div>
+        <div class="Footer_txt">
+            <ul class="Footer_sns">
+                <li>
+                    <i class="fa fa-cc-paypal"></i>
+                </li>
+                <li>
+                    <i class="fa fa-cc-visa"></i>
+                </li>
+                <li>
+                    <i class="fa fa-cc-mastercard"></i>
+                </li>
+            </ul>
+            <ul class="Footer_list">
+                <li><strong class="defult_txt">Family Site <i class="fa fa-ellipsis-v"></i></strong>
+                <ul class="Footer_SubList">
+                <li><a href="http://department.ssg.com">SHINSEGAE</a></li>
+                <li><a href="http://www.ssg.com/">SSG.COM</a></li>
+                <li><a href="https://store.emart.com/">E-MART</a></li>
+                </ul></li>
+                
+            </ul>
+            <p class="Footer_address">Sales&amp;inquiry:<a href="mailto:hgh0328@naver.com">hgh0328@naver.com</a><br>
+            Technical support : +82-1234-5678</p>
+            <div class="copyRight">
+                <strong class="copy">&copy; 2019 ELECTROMART inc. All Rights Reserved.</strong>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

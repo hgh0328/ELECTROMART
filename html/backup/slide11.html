@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>main_slide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="../../css/swiper.min.css">
+
+
+  <script>
+        $(function() {
+         });
+      
+    </script>
+  <style>
+    
+    .swiper-slide {
+      background: #eee;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+      .txt{width: 70%; background: #eee;}
+      .swiper-slide div{float: left;}
+      .swiper-slide{width: 80%; position: relative; z-index: 99999;}
+      .swiper-slide::after{content: ''; display: block; clear: both;}
+      .swiper-container{width: 100%; position: relative; text-align: left;}
+      .swiper-wrapper{width: 60%;}
+      .swiper-slide h2{text-align: center; font-size: 2vw;}
+      .title{color: red; position: absolute; top: 0; left: 51%; z-index: 3; font-size: 3vw;}
+      
+      
+  </style>
+</head>
+
+<body>
+
+<div class="swiper-container">
+   
+    <div class="swiper-wrapper">
+     
+      <div class="swiper-slide">      
+<div class="box"><img src="../../images/slide/slide1.png" alt="슬라이드이미지"></div>          
+<div class="txt"></div>
+    </div>
+     <div class="swiper-slide">      
+<div class="box"><img src="../../images/slide/slide2.png" alt="슬라이드이미지"></div>          
+<div class="txt"></div>
+    </div>
+     <div class="swiper-slide">      
+<div class="box"><img src="../../images/slide/slide3.png" alt="슬라이드이미지"></div>          
+<div class="txt"></div>
+    </div>
+     <div class="swiper-slide">      
+<div class="box"><img src="../../images/slide/slide4.png" alt="슬라이드이미지"></div>          
+<div class="txt"></div>
+    </div></div>
+    <h2 class="title"> Hi hello</h2>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+  </div>
+  
+  
+  
+  <script src="../../js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1.5,
+        loop:true,
+      autoplay: {
+        delay: 2500,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });;
+  </script>
+
+
+
+
+</body></html>

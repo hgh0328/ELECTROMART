@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../js/aos.js"></script>
+
+    <style>
+        /*defult setting*/
+        body, html{width: 100%; height: 100%; position: relative;}
+        em {
+            font-style: normal;
+        }
+
+        #wrap {
+
+            max-height: 1080px;
+            max-width: 100%;
+
+        }
+
+        body {
+            width: 100%;
+            background: #eee;
+            
+        }
+
+        header {
+            z-index: 9999;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-trank {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: steelblue;
+        }
+
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            width: 10px;
+            height: 10px;
+            background: steelblue;
+        }
+
+    </style>
+    <style>
+        html,body{width: 100%; height: 100%;}
+        #wrap{width: 100%; height: 100%;}
+        .Event_content{width: 100%; height: 100%; position: relative; background: url("../images/Event/Evnet_bg.png") no-repeat; background-size: cover; background-position: 54% 0%; transition: 0.3s;}
+        .Event_list{position: absolute; width: 100%; top: 40%; text-align: center; transition: 0.3s;}
+        .Event_list li{float: left; width: 33.33%; padding-bottom: 2.5%; padding-top: 2.5%;}
+        .EL_title{color: #f9f9f9; font-weight: bold; font-size: 1.3vw; transition: 0.3s;}
+        .EL_txt{color: #cfcfcf; font-weight: bold; font-size: 0.7vw;}
+        
+        /*구매혜택*/
+        .Bonus_Content{width: 100%; height: 135%; background: #eee; position: relative; text-align: center; margin-bottom: 100px; transition: 0.3s;}
+        .Bonus_CBOX1{display: flex; width: 80%; margin: 0 auto; margin-top: 50px; }
+        .Bonus_CBOX2{display: flex; width: 80%; margin: 0 auto;}
+        .Bonus_CBOX3{display: flex; width: 80%; margin: 0 auto;}
+        .Bonus_C1{flex: 1;}
+        .Bonus_C2{flex: 1;}
+        .Bonus_C3{flex: 1;}
+        .Bonus_C4{flex: 1;}
+        .Bonus_C5{flex: 1;}
+        .Bonus_C6{flex: 1;}
+        .Bonus_C7{flex: 1;}
+        .Bonus_Content > h3{font-size: 36px; margin-top: 100px; letter-spacing: 10px;}
+        .Bonus_Content > p{font-size: 18px; letter-spacing: 2.5px;}
+        
+        /*이벤트&체험 응모*/
+        .Entry_Content{width: 100%; height: 100%; position: relative; text-align: center; background: #eee;  padding-top: 1%; transition: 0.3s;}
+        .Entry_Content h3{font-size: 36px; letter-spacing: 10px;  position: relative;}
+        .Entry_Content  p{font-size: 18px; letter-spacing: 2.5px; position: relative;}
+        .Entry_C1{width: 90%; margin: 0 auto; position: relative;}
+        .Entry_List li{float: left; width: 33.33%; margin-top: 50px;}
+        .Entry_List:after{content: ''; display: block; clear: both;}
+        
+        .Enjoy_Content{width: 100%; text-align: center; margin-top: 3%; margin-bottom: 3%;}
+        .Enjoy_Content h3{font-size: 36px; letter-spacing: 10px;  position: relative; width: 100%;}
+        .Enjoy_Content  p{font-size: 18px; letter-spacing: 2.5px; position: relative; width: 100%;}
+        
+        
+        .Entry_List  h4{font-size: 20px; transition: 0.3s;}
+        .Entry_List  h5{font-size: 15px; transition: 0.3s;}
+        .exing{background: steelblue; color: #fff; width: 25%; margin: 10px auto; font-size: 15px; transition: 0.3s;}
+        .ing{background: steelblue; color: #fff; width: 25%; margin: 10px auto; font-size: 15px; transition: 0.3s;}
+        .exclose{background: darkred; color: #fff; width: 25%; margin: 10px auto; font-size: 15px; transition: 0.3s;}
+        .close{background: gray; color: #fff; width: 25%; margin: 10px auto; font-size: 15px; transition: 0.3s;}
+
+        
+
+      
+
+    </style>
+    <style>
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+            .Event_content{height: 600px; background-position: 50% 0%; height: 80%; transition: 0.3s;}
+            .Event_list{top: 50%; transition: 0.3s;}
+            .Bonus_Content{height: 80%; margin-bottom: 100px; transition: 0.3s;}
+            .Entry_Content{height: 80%; transition: 0.3s;}
+            .Enjoy_Content{height: 80%; margin-top: 1%; transition: 0.3s;}
+            
+            .Entry_List  h4{font-size: 16px; transition: 0.3s;}
+            .Entry_List  h5{font-size: 12px; transition: 0.3s;}
+            .exing{width: 30%; font-size: 11px; transition: 0.3s;}
+            .ing{width: 30%; font-size: 11px; transition: 0.3s;}
+            .exclose{width: 30%; font-size: 11px; transition: 0.3s;}
+            .close{width: 30%; font-size: 11px; transition: 0.3s;}
+        }
+
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            .Event_content{height: 500px; background-position: 50% 50%; height: 50%; transition: 0.3s;}
+            .Event_list{top: 45%; transition: 0.3s;}
+            .EL_title{font-size: 2vw; transition: 0.3s;}
+            
+            .Bonus_Content{height: 45%; margin-bottom: 0px; transition: 0.3s;}
+            .Entry_Content{height: 75%; margin-top: 10%; transition: 0.3s;}
+            .Enjoy_Content{margin-top: 40%; margin-bottom: 15%;transition: 0.3s;}
+            .Entry_List li{width: 50%; transition: 0.3s;}
+            
+            .Entry_List  h4{font-size: 15px; transition: 0.3s;}
+            .Entry_List  h5{font-size: 14px; transition: 0.3s;}
+            .exing{width: 45%; font-size: 12px; transition: 0.3s;}
+            .ing{width: 45%; font-size: 12px; transition: 0.3s;}
+            .exclose{width: 45%; font-size: 12px; transition: 0.3s;}
+            .close{width: 45%; font-size: 12px; transition: 0.3s;}
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+            
+            
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div id="wrap">
+        <header></header>
+        <div class="Event_content">
+            <ul class="Event_list">
+                <li><img src="../images/Event/Event_1/Pro_moblie6.png" alt="event_moblie"  width="50%">
+                <p class="EL_title">Power of E10</p>
+                <p class="EL_txt">당신이 원하는 것은 무엇이든<br>파워풀한 ELECTRO E10 5G와 함께</p>
+                </li>
+                <li><img src="../images/Event/Event_1/ha1_1.png" alt="event_tv" width="60%" style="padding-bottom: 6.5%">
+                <p class="EL_title">NEW Lisfestyle TV</p>
+                <p class="EL_txt">공간을 갤러리로 만드는 ART<br>세련된 아이코닉 디자인과 The Serif만의 감성을 담다</p>
+                </li>
+                <li><img src="../images/Event/Event_1/Pro_DeskTop1.png" alt="event_pc" width="50%">
+                <p class="EL_title">It's your Odysseia In your Odysseia</p>
+                <p class="EL_txt">생활이 더 편리해지는 IT아이템<br>강력한 쿨링 시스템과 최강 퍼포먼스를 지금 경험해보세요</p>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="Bonus_Content" id="Bonus">
+          <h3>구매혜택</h3>
+          <p>차원이 다른 혜택</p>
+           <div class="Bonus_CBOX1">
+               <div class="Bonus_C1 box">
+                   <img src="../images/Event/Bonus/1.png" alt="BONUSIMAGE" width="100%" height="100%">
+               </div>
+               <div class="Bonus_C2 box">
+                   <img src="../images/Event/Bonus/2.png" alt="BONUSIMAGE" width="100%" height="100%"> 
+               </div>
+           </div>
+           
+           <div class="Bonus_CBOX2">
+               <div class="Bonus_C3 box">
+                   <img src="../images/Event/Bonus/3.png" alt="BONUSIMAGE" width="100%" height="100%"> 
+               </div>
+               <div class="Bonus_C4 box">
+                   <img src="../images/Event/Bonus/4.png" alt="BONUSIMAGE" width="100%" height="100%"> 
+               </div>
+               <div class="Bonus_C5 box">
+                   <img src="../images/Event/Bonus/5.png" alt="BONUSIMAGE" width="100%" height="100%"> 
+               </div>
+           </div>
+           
+           <div class="Bonus_CBOX3">
+               <div class="Bonus_C6 box">
+                   <img src="../images/Event/Bonus/6.png" alt="BONUSIMAGE" width="100%" height="100%"> 
+               </div>
+               <div class="Bonus_C7 box">
+                  <img src="../images/Event/Bonus/7.png" alt="BONUSIMAGE" width="100%" height="100%">  
+               </div>
+           </div>
+            
+        </div>
+        
+        <div class="Entry_Content" id="Entry">
+            <h3>이벤트 응모</h3>
+          <p>차원이 다른 혜택</p>
+           <div class="Entry_C1">
+               <ul class="Entry_List">
+                   <li>
+                   <img src="../images/Event/Enrty/1.png" alt="이벤트응모이미지">
+                   <h4>ELECTRO BESPOKE 이벤트</h4>                   
+                   <h5>2019.11.22 ~ 2019.12.23</h5>                 
+                   <h6 class="exing">진행예정</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/2.png" alt="이벤트응모이미지">
+                   <h4>현명한 쇼핑의 시작 혜택 ZONE</h4>                   
+                   <h5>2019.10.22 ~ 2019.11.23</h5>                 
+                   <h6 class="ing">진행중</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/3.png" alt="이벤트응모이미지">
+                   <h4>ELECTRO 프리미엄 셀렉트샵</h4>                   
+                   <h5>2019.09.12 ~ 2019.10.28</h5>                 
+                   <h6 class="exclose">종료 3일전</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/4.png" alt="이벤트응모이미지">
+                   <h4>2019 MASTER 특가전</h4>                   
+                   <h5>2019.08.10 ~ 2019.10.26</h5>                 
+                   <h6 class="exclose">종료 5일전</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/5.png" alt="이벤트응모이미지">
+                   <h4>라이프스타일 사운드 사전판매</h4>                   
+                   <h5>2019.07.17 ~ 2019.08.23</h5>                 
+                   <h6 class="close">종료</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/6.png" alt="이벤트응모이미지">
+                   <h4>의류케어 SNS 구매후기</h4>                   
+                   <h5>2019.02.28 ~ 2019.03.28</h5>                 
+                   <h6 class="close">종료</h6>
+                   </li>
+               </ul>
+           </div>            
+        </div>
+        <div class="Enjoy_Content" id="Enjoy">
+            <h3>체험단 모집</h3>
+          <p>차원이 다른 혜택</p>
+           <div class="Entry_C1">
+               <ul class="Entry_List">
+                   <li>
+                   <img src="../images/Event/Enrty/2_1.png" alt="이벤트응모이미지">
+                   <h4>ELECTRO BESPOKE 체험단</h4>                   
+                   <h5>2019.11.22 ~ 2019.12.23</h5>                 
+                   <h6 class="exing">진행예정</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/2_2.png" alt="이벤트응모이미지">
+                   <h4>ELECTRO SIGNTURE 체험단</h4>                   
+                   <h5>2019.10.22 ~ 2019.11.23</h5>                 
+                   <h6 class="ing">진행중</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/2_3.png" alt="이벤트응모이미지">
+                   <h4>의류케어 스타일러 체험단</h4>                   
+                   <h5>2019.09.12 ~ 2019.10.28</h5>                 
+                   <h6 class="exclose">종료 3일전</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/2_4.png" alt="이벤트응모이미지">
+                   <h4>IOT 가전 체험단</h4>                   
+                   <h5>2019.08.10 ~ 2019.10.26</h5>                 
+                   <h6 class="exclose">종료 5일전</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/2_5.png" alt="이벤트응모이미지">
+                   <h4>빌트인 셰프컬렉션 체험단</h4>                   
+                   <h5>2019.07.17 ~ 2019.08.23</h5>                 
+                   <h6 class="close">종료</h6>
+                   </li>
+                   <li>
+                   <img src="../images/Event/Enrty/2_6.png" alt="이벤트응모이미지">
+                   <h4>ELECTRO 큐브청정 체험단</h4>                   
+                   <h5>2019.02.28 ~ 2019.03.28</h5>                 
+                   <h6 class="close">종료</h6>
+                   </li>
+               </ul>
+           </div>     
+            
+        </div>
+
+        
+
+
+
+
+        <!--footer-->
+        <footer></footer>
+    </div>
+    
+
+
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+        $(function() {});
+
+    </script>
+
+
+</body>
+
+</html>

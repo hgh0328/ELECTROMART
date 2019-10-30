@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO BOARD</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    
+    
+    <style>
+section {position: relative; width: 100%;}
+
+#help3 {position: relative; width: 100%; margin: 0 auto; max-width: 1600px;}
+	
+#help3 .searchbox {width: 100%; margin: 0 auto; text-align: center; margin-bottom: 1%; margin-top: 2%;}
+#help3 .searchbox .selectbox {padding-left: 1.5%; padding-right: 2%; border: 0; font-size: 0.8vw;height: 30px; border-bottom: 1px solid #251e1e;}
+#help3 .searchbox .text {width: 30%; border: 0; font-size: 0.8vw;  color: black; border-bottom: 1px solid #251e1e; height: 27px; margin-left: 1%; text-indent: 1vw;}
+#help3 .searchbox .text::placeholder {color: black;}
+.searcharea .fa-search{cursor: pointer; font-size: 1.3vw; margin-left: 1%;}
+
+
+#help3 .news {width: 100%;}
+#help3 .news thead {border-top: 5px solid steelblue; border-bottom: 2px solid grey;}
+
+#help3 .news thead tr td {font-weight: bold; font-size: 1vw; padding-top: 1%; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+#help3 .news thead tr td.hnumber {width: 20%; }
+#help3 .news thead tr td.hname {width: 80%;}
+#help3 .news thead tr td.hdate {width: 20%;}
+#help3 .news tbody {margin: 0; padding: 0;}
+        
+#help3 .news tbody tr td {padding-top: 1.5%; padding-bottom: 1.5%;}
+#help3 .news tbody tr td.number {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1vw;}
+#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 1vw;}
+#help3 .news tbody tr td.date {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1vw;}
+
+#help3 .page_num {width: 100%; text-align: center; margin: 0 auto; display: inline-block; position: relative; margin-top: 2%; margin-bottom: 5%;}
+#help3 .page_num .front {display: inline-block; width: 36px; height: 35px; padding-top: 5px; background: url(../images/front.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+#help3 .page_num .prev {display: inline-block; width: 36px; height: 35px; background: url(../images/prev.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+#help3 .page_num .num_1 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_2 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_3 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_4 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_5 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .next {display: inline-block; width: 36px; height: 35px; background: url(../images/next.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
+#help3 .page_num .back {display: inline-block; width: 36px; height: 35px; background: url(../images/back.png); position: relative; top: 10px; background-size: cover;}
+.onClick{border: 1px solid black; font-weight: bold;}
+
+
+
+@media screen and (min-width:1200px) and (max-width:1399px){
+
+	
+	
+	#help3 .news {width: 90%; margin: 0 auto;}
+	#help3 .news thead {border-top: 3px solid black; border-bottom: 1px solid grey;}
+
+	#help3 .news thead tr td {font-weight: bold; font-size: 1.2vw; padding-top: 1%; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+	#help3 .news thead tr td.hnumber {width: 15%;}
+	#help3 .news thead tr td.hname {width: 70%;}
+	#help3 .news thead tr td.hdate {width: 15%;}
+	#help3 .news tbody {margin: 0; padding: 0;}
+
+	#help3 .news tbody tr td {padding-top: 1.5%; padding-bottom: 1.5%;}
+	#help3 .news tbody tr td.number {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1.1vw;}
+	#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 1.1vw;}
+	#help3 .news tbody tr td.date {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1.1vw;}
+    
+    
+
+}
+
+
+@media screen and (min-width:800px) and (max-width:1199px){
+
+	
+
+	#help3 .news {width: 90%; margin: 0 auto;}
+	#help3 .news thead {border-top: 3px solid black; border-bottom: 1px solid grey;}
+	
+	#help3 .news thead tr td {font-weight: bold; font-size: 1.2vw; padding-top: 1%; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+	#help3 .news thead tr td.hnumber {width: 15%;}
+	#help3 .news thead tr td.hname {width: 70%;}
+	#help3 .news thead tr td.hdate {width: 15%;}
+	#help3 .news tbody {margin: 0; padding: 0;}
+
+	#help3 .news tbody tr td {padding-top: 1.5%; padding-bottom: 1.5%;}
+	#help3 .news tbody tr td.number {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1.2vw;}
+	#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 1.2vw;}
+	#help3 .news tbody tr td.date {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1.2vw;}
+    
+    #help3 .page_num .front {display: inline-block; width: 25px; height: 24px; padding-top: 5px; background: url(../images/front.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .prev {display: inline-block; width: 25px; height: 24px; background: url(../images/prev.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .num_1 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+
+    
+    #help3 .page_num .num_2 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_3 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_4 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_5 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .next {display: inline-block; width: 25px; height: 24px; background: url(../images/next.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
+    
+    #help3 .page_num .back {display: inline-block; width: 25px; height: 24px; background: url(../images/back.png); position: relative; top: 10px; background-size: cover;}
+
+
+}
+
+@media all and (min-width:401px) and (max-width:800px){
+
+	
+	#help3 .news {width: 100%; margin: 0 auto;}
+	#help3 .news thead {border-top: 3px solid black; border-bottom: 1px solid grey;}
+
+	#help3 .news thead tr td {font-weight: bold; font-size: 1.2vw; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+	#help3 .news thead tr td.hnumber {width: 10%;}
+	#help3 .news thead tr td.hname {width: 70%;}
+	#help3 .news thead tr td.hdate {width: 20%;}
+	#help3 .news tbody {margin: 0; padding: 0;}
+    
+    #help3 .searchbox .selectbox{font-size: 16px;}
+    #help3 .searchbox .text{font-size: 16px; width: 60%;}
+    .searcharea .fa-search{ font-size: 16px;}
+
+	#help3 .news tbody tr td {padding-top: 5%; padding-bottom: 5%;}
+	#help3 .news tbody tr td.number {width: 10%; text-align: center; border-bottom: 1px solid grey; font-size: 2.5vw;}
+	#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 2.5vw;}
+	#help3 .news tbody tr td.date {width: 20%; text-align: center; border-bottom: 1px solid grey; font-size: 2.5vw;}
+    
+    #help3 .page_num .front {display: inline-block; width: 25px; height: 24px; padding-top: 5px; background: url(../images/front.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .prev {display: inline-block; width: 25px; height: 24px; background: url(../images/prev.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .num_1 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_2 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_3 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_4 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_5 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .next {display: inline-block; width: 25px; height: 24px; background: url(../images/next.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
+    
+    #help3 .page_num .back {display: inline-block; width: 25px; height: 24px; background: url(../images/back.png); position: relative; top: 10px; background-size: cover;}
+	
+}
+    </style>
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    
+    <script>
+    $(function(){
+        var i=0;
+        $(".n1").show();
+        $(".num_1").addClass("onClick");
+        $(".num_2").removeClass("onClick");
+        $(".num_3").removeClass("onClick");
+        $(".num_4").removeClass("onClick");
+        $(".num_5").removeClass("onClick");
+        $(".n2").hide();
+        $(".n3").hide();
+        $(".n4").hide();
+        $(".n5").hide();
+        
+        $(".front").click(function(e){
+            i = 0;
+            e.preventDefault();
+            $(".n1").show();
+            $(".num_1").addClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        
+        $(".prev").click(function(e){
+            e.preventDefault();
+            switch(i){
+                case 1:
+                    i = 0;
+                    $(".n1").show();
+                    $(".num_1").addClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 2:
+                    i = 1;
+                    $(".n2").show();
+                    $(".num_2").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 3:
+                    i = 2;
+                    $(".n3").show();
+                    $(".num_3").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 4:
+                    i = 3;
+                    $(".n4").show();
+                    $(".num_4").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n5").hide();
+                    break;
+            }
+                    
+        });
+        
+        $(".num_1").click(function(e){
+            e.preventDefault();
+            i = 0;
+            $(".n1").show();
+            $(".num_1").addClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        $(".num_2").click(function(e){
+            e.preventDefault();
+            i = 1;
+            $(".n2").show();
+            $(".num_2").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n1").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        $(".num_3").click(function(e){
+            e.preventDefault();
+            i = 2;
+            $(".n3").show();
+            $(".num_3").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        $(".num_4").click(function(e){
+            e.preventDefault();
+            i = 3;
+            $(".n4").show();
+            $(".num_4").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n5").hide();
+        });
+        $(".num_5").click(function(e){
+            e.preventDefault();
+            i = 4;
+            $(".n5").show();
+            $(".num_5").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+        });
+        
+        $(".next").click(function(e){
+            e.preventDefault();
+            switch(i){
+                case 0:
+                    i = 1;
+                    $(".n2").show();
+                    $(".num_2").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 1:
+                    i = 2;
+                    $(".n3").show();
+                    $(".num_3").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 2:
+                    i = 3;
+                    $(".n4").show();
+                    $(".num_4").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n5").hide();
+                    break;
+                case 3:
+                    i = 4;
+                    $(".n5").show();
+                    $(".num_5").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    break;
+            }
+                    
+        });
+        
+        $(".back").click(function(e){
+            i = 4;
+            e.preventDefault();
+            $(".n5").show();
+            $(".num_5").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+        });
+    });
+        
+    </script>
+    
+    
+</head>
+<body>
+    	<section>		
+    		<div id="help3">
+    			
+    		
+    		
+    		
+    			
+    			<table class="news n1">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">50</td>
+    						<td class="name">ELECTRO 5G 주요 체험 매장 안내</td>
+    						<td class="date">2019 - 10 - 11</td>
+    					</tr>
+    					<tr>
+    						<td class="number">49</td>
+    						<td class="name">개인정보처리방침 변경 안내</td>
+    						<td class="date">2019 - 10 - 10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">48</td>
+    						<td class="name">추석 연휴 배송 안내</td>
+    						<td class="date">2019 - 10 - 9</td>
+    					</tr>
+    					<tr>
+    						<td class="number">47</td>
+    						<td class="name">ELECTRO 5G 예약 판매 안내</td>
+    						<td class="date">2019 - 10 - 8</td>
+    					</tr>
+    					<tr>
+    						<td class="number">46</td>
+    						<td class="name">에너지효율 가전제품 구매비용 환급 안내</td>
+    						<td class="date">2019 - 10 - 7</td>
+    					</tr>
+    					<tr>
+    						<td class="number">45</td>
+    						<td class="name">ELECTRO NOTE10 사전 구매 고객 개통 기간 연장</td>
+    						<td class="date">2019 - 10 - 6</td>
+    					</tr>
+    					<tr>
+    						<td class="number">44</td>
+    						<td class="name">ELECTRO.COM App 서비스 점검 안내</td>
+    						<td class="date">2019 - 10 - 5</td>
+    					</tr>
+    					<tr>
+    						<td class="number">43</td>
+    						<td class="name">ELECTRO MART 신설 매장 위치 안내</td>
+    						<td class="date">2019 - 10 - 4</td>
+    					</tr>
+    					<tr>
+    						<td class="number">42</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 3</td>
+    					</tr>
+    					<tr>
+    						<td class="number">41</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 2</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n2">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">40</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 11</td>
+    					</tr>
+    					<tr>
+    						<td class="number">39</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">38</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 9</td>
+    					</tr>
+    					<tr>
+    						<td class="number">37</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 8</td>
+    					</tr>
+    					<tr>
+    						<td class="number">36</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 7</td>
+    					</tr>
+    					<tr>
+    						<td class="number">35</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 6</td>
+    					</tr>
+    					<tr>
+    						<td class="number">34</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 5</td>
+    					</tr>
+    					<tr>
+    						<td class="number">33</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 4</td>
+    					</tr>
+    					<tr>
+    						<td class="number">32</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 3</td>
+    					</tr>
+    					<tr>
+    						<td class="number">31</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 2</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n3">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">30</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 10 - 1</td>
+    					</tr>
+    					<tr>
+    						<td class="number">29</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 30</td>
+    					</tr>
+    					<tr>
+    						<td class="number">28</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 29</td>
+    					</tr>
+    					<tr>
+    						<td class="number">27</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 28</td>
+    					</tr>
+    					<tr>
+    						<td class="number">26</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 27</td>
+    					</tr>
+    					<tr>
+    						<td class="number">25</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 26</td>
+    					</tr>
+    					<tr>
+    						<td class="number">24</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 25</td>
+    					</tr>
+    					<tr>
+    						<td class="number">23</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 24</td>
+    					</tr>
+    					<tr>
+    						<td class="number">22</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 23</td>
+    					</tr>
+    					<tr>
+    						<td class="number">21</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 22</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n4">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">20</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 21</td>
+    					</tr>
+    					<tr>
+    						<td class="number">19</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 20</td>
+    					</tr>
+    					<tr>
+    						<td class="number">18</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 19</td>
+    					</tr>
+    					<tr>
+    						<td class="number">17</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 18</td>
+    					</tr>
+    					<tr>
+    						<td class="number">16</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 17</td>
+    					</tr>
+    					<tr>
+    						<td class="number">15</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 16</td>
+    					</tr>
+    					<tr>
+    						<td class="number">14</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 15</td>
+    					</tr>
+    					<tr>
+    						<td class="number">13</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 14</td>
+    					</tr>
+    					<tr>
+    						<td class="number">12</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 13</td>
+    					</tr>
+    					<tr>
+    						<td class="number">11</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 12</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n5">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">10</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 11</td>
+    					</tr>
+    					<tr>
+    						<td class="number">9</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">8</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 9</td>
+    					</tr>
+    					<tr>
+    						<td class="number">7</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 8</td>
+    					</tr>
+    					<tr>
+    						<td class="number">6</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 7</td>
+    					</tr>
+    					<tr>
+    						<td class="number">5</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 6</td>
+    					</tr>
+    					<tr>
+    						<td class="number">4</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 5</td>
+    					</tr>
+    					<tr>
+    						<td class="number">3</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 4</td>
+    					</tr>
+    					<tr>
+    						<td class="number">2</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 3</td>
+    					</tr>
+    					<tr>
+    						<td class="number">1</td>
+    						<td class="name">ELECTRO MART (비밀글)</td>
+    						<td class="date">2019 - 9 - 2</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<div class="searchbox">
+    				<form action="post" class="searcharea">
+    					<fieldset>
+    						<legend>게시물검색</legend>
+    						<select name="select1" id="select1" class="selectbox">
+    							<option value>전체</option>
+    							<option value="1">제목</option>
+    							<option value="2">내용</option>
+    						</select>
+    						<input type="text" class="text" title="검색어" placeholder="검색어를 입력하세요.">
+    						<i class="fa fa-search"></i>
+    					</fieldset>
+    				</form>
+    			</div>
+    			
+    			
+    			
+    			<div class="page_num">
+    				<a href="#" class="front">
+    				</a>
+    				<a href="#" class="prev">
+    				</a>
+    				<a href="#" class="num_1">1</a>
+    				<a href="#" class="num_2">2</a>
+    				<a href="#" class="num_3">3</a>
+    				<a href="#" class="num_4">4</a>
+    				<a href="#" class="num_5">5</a>
+    				<a href="#" class="next">
+    				</a>
+    				<a href="#" class="back">
+    				</a>
+    			</div>
+    		</div>
+    	</section>
+	
+	
+	
+</body>
+</html>

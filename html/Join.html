@@ -1,0 +1,134 @@
+<?php   include "db.php"; ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>고오오~급진 로그인&amp;회원가입</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.vide.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        body, html{width: 100%; height: 100%; position: relative;}
+        header{z-index: 9999}
+        
+        
+        #wrap{width: 100%; overflow: hidden; color: #f9f9f9; font-family: 'Do Hyeon', sans-serif;}
+        .R_box{ position: absolute;  background: rgba(255,255,255,0.8); text-align: center; width: 60%; margin: 0 auto;  top: 12%;left: 20%; height: auto; padding-bottom: 50px;}
+        .R_box h1{font-size: 28px; background: #0078c1; color: #f8f7f7; line-height: 80px; letter-spacing: 4px;}
+        fieldset{border: 3px solid rgba(0,0,0,0.3); width: 90%; margin: 5% auto auto; border-radius: 5px; background: rgba(0,0,0,0.2);}
+        legend{color: #3e3e3e;}
+        .T{font-size: 20px; width: 20%; text-align: right; color: #1e1e1e; line-height: 60px; padding-right: 5%;}
+        .import{color: #0078c1; font-size: 16px; font-weight: normal; letter-spacing: 1px; width: 24%;}
+        input[type ="text"]{height: 25px; font-size: 14px; text-indent: 0.5vw;}
+        .R_box select{height: 30px; font-size: 14px; text-indent: 0.5vw;}
+        input[type ="password"]{height: 25px; font-size: 14px; text-indent: 10px;}
+        input[type ="submit"]{font-size: 16px; margin: 1%; padding: 1%; border:1px #3399dd solid; background-color:#0078c1; cursor: pointer; transition:all 1.5s; font-weight: bold; color: #fff; border-radius: 5px; width: 250px; margin-top: 5%; margin-bottom: 5%;}
+        input[type ="submit"]:hover{color:#0078c1; box-shadow:-200px 0 0 0 rgba(255,255,255,255.5) inset;}
+        input[type ="reset"]{font-size: 14px; margin: 10px; padding: 10px; border:1px #3399dd solid; background-color:rgba(0,120,193,0.5); cursor: pointer; transition:all 1.5s; font-weight: bold; color: #fff; border-radius: 5px;}
+        input[type ="button"]{font-size: 14px; margin: 10px; padding: 10px; border:1px #3399dd solid; background-color:rgba(0,120,193,0.5); cursor: pointer; transition:all 1.5s; font-weight: bold; color: #fff; border-radius: 5px;}
+        input[type ="reset"]:hover{color:#0078c1; box-shadow:10vmax 0 0 0 rgba(255,255,255,255.5) inset;}
+        input[type ="button"]:hover{color:#0078c1; box-shadow:15vmax 0 0 0 rgba(255,255,255,255.5) inset;}
+        .sex{font-size: 18px; text-align: left; text-indent: 0.5vw; padding-left: 15%;}
+        .Textbox1{margin-right: 50px;}
+        input[type ="radio"]{
+            width: 15px; height: 15px; margin-right: 5%;
+            border: 3px solid #3e3e3e; 
+            margin-left: 10px;
+            border-radius: 5px;
+            line-height: 1.3vw;
+            -webkit-appearance:none;
+        }
+        input:checked[type='radio']{
+            transition: 0.5s;
+            background-color: #0078c1;
+            border-color: #fff;
+            border-radius: 50%;
+            -webkit-appearance:none;
+        }
+        .dott{font-size: 16px; text-align: right; margin-left: 5px;}
+        
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+            .R_box{width: 80%; left: 10%;}
+            
+        }
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            .R_box{width: 100%; left: 0;}
+            .Textbox1{margin-right: 50px;}
+       
+        }
+        
+
+
+    </style>
+    
+    <script>
+    $(function() {
+            $("header").load("header.html");
+    });
+    </script>
+
+</head>
+
+<body data-vide-bg="../images/bg.mp4">
+  <header></header>
+   
+    <div id="wrap">
+    <div class="R_box">
+       <form method="get" action="Login.html">
+		<h1>SIGN UP WITH ELECTRO MART</h1>
+			<fieldset>
+                <legend>필수입력사항</legend>
+					<table align="center">
+						<tr>
+							<td class="T">아이디</td>
+							<td><input type="text" size="25" name="userid" placeholder="아이디" class="Textbox1"></td>
+							<td class="import">* 필수입력사항</td>
+						</tr>
+						<tr>
+							<td class="T">비밀번호</td>
+							<td><input type="password" size="25" name="userpw" placeholder="비밀번호" class="Textbox1"></td>
+							<td class="import">* 필수입력사항</td>
+						</tr>
+						<tr>
+							<td class="T">이름</td>
+							<td><input type="text" size="25" name="name" placeholder="이름" class="Textbox1"></td>
+							<td class="import">* 필수입력사항</td>
+						</tr>
+						<tr>
+							<td class="T">주소</td>
+							<td><input type="text" size="25" name="adress" placeholder="주소" class="Textbox1"></td>
+						</tr>
+						<tr>
+							<td class="T">성별</td>
+							<td class="sex">남성<input type="radio" name="sex" value="남"> 여성<input type="radio" name="sex" value="여"></td>
+						</tr>
+						<tr>
+							<td class="T">이메일</td>
+							<td class="Email"><input type="text" name="email" size="16"><span class="dott">@</span>
+							<select name="emadress">
+							<option value="deflut">직접입력</option>
+							<option value="naver.com">naver.com</option>
+							<option value="daum.net">daum.net</option>
+							<option value="gmail.com">gmail.com</option>
+							</select></td>
+						</tr>
+					</table>
+
+				<a href="../index.html" class="return"><input type="button" value="메인으로돌아가기" /></a>
+				<input type="reset" value="다시쓰기" />
+             <input type="submit" value="가입하기"/>
+           </fieldset>
+        </form>
+        </div>
+    </div>
+    
+    
+
+</body>
+
+</html>

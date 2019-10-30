@@ -1,0 +1,2839 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/aos.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="js/aos.js"></script>
+
+    <style>
+        /*defult setting*/
+        body, html{width: 100%; height: 100%;}
+        #wrap {
+            
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        body {
+            width: 100%;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            z-index: 9999;
+            height: auto;
+            background: #000;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-trank {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: steelblue;
+        }
+
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            width: 5px;
+            height: 5px;
+            background: steelblue;
+        }
+
+
+    </style>
+
+    <style>
+        /*contents*/
+        .contents{width: 100%; overflow-x: hidden;}
+        /*content_1*/
+        .content_1 {
+            width: 100%;
+            position: relative;
+            height: 1090px;
+            background-image: url(images/contents/contents1_bg.png);
+            background-attachment: fixed;
+            background-repeat: repeat-x;
+            font-family: 'Poppins', sans-serif;
+            background-size: cover;
+        }
+
+        .content_1 h2 {
+            font-family: 'PT Sans', sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 3vw;
+            line-height: 3vw;
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            z-index: 999;
+        }
+
+        .content_1 span {
+            display: block;
+            z-index: 999;
+        }
+        .content_1 span:not(.light) {
+            opacity: 0.7;
+            filter: blur(1px);
+        }
+        
+
+        .content_1 .light {
+            position: relative;
+            display: inline;               
+                left: 0;
+                top: -10%;
+                width: 1000%;
+                height: 120%;
+                color: #0078c1;
+                filter: blur(1.5px);
+                content: "";
+                opacity: 0.3;
+                animation: flash 0.8s ease-out alternate infinite;
+               font-size: 4.5vw;
+            
+        }
+        .content_1 .Click{animation: flashText 0.8s ease-out alternate infinite; opacity: 1; text-align: right; border: 1px solid; display: inline; padding: 2%; border-radius: 15px; cursor: pointer; text-transform: none; font-size: 2vw; margin-top: 0; z-index: 999;}
+        .content_1 .Click:hover{background: #fdd22b; color: #fff; animation: none;}
+
+        @keyframes flash {
+            to {
+                opacity: 0.8;
+
+            }
+        }
+
+
+        @keyframes flashText {
+            to {
+                opacity: 0.5;
+                color: #fdd22b;
+                background: #fff;
+                
+            }
+        }
+        @-webkit-keyframes bg-pan-br1{0%{background-position:0 0}100%{background-position:100% 100%} }
+        @-webkit-keyframes bg-pan-br2{0%{background-position:100% 100%}100%{background-position:0% 0%} }
+        .ContentAfter{position: relative; top: 10%; color: #fff; width: 100%; text-align: center; height: 800px; font-size: 1.5vw; }
+        .c1_txt1{position: absolute; left: 2%; top: 12%; }
+        .c1_txt2{position: absolute; left: 10%; top: 70%; }
+        .c1_txt3{position: absolute; left: 42%; top: 2%; }
+        .c1_txt4{position: absolute; left: 55%; top: 60%; }
+        .return_content_1{position: absolute; right: 5%; color: floralwhite; opacity: 0.6; border: 1px solid; border-radius: 10px; padding: 0.1% 1% 0.1% 1%; }
+        .return_content_1:hover{animation: flash 1s infinite; color: #fdd22b; background: #0078c1; border-color: #0078c1; }
+        
+        /*content_2*/
+        .content_2 {position: relative; width: 100%; height: 1090px; background: #000;}
+        .dan_bg{position: absolute; width: 100%;}
+        .content_2 article {position: relative; width: 12%; height: 100%; background: url(images/divider.png)no-repeat left center; float: left;
+        overflow: hidden; transition: all 0.5;}
+
+        /*article*/
+        .content_2 article h2 {position: absolute;top: 300px; left: 20px;padding-left: 15px;border-left: 6px solid #fff;
+        font: bold 20px 'PT Sans', sans-serif; color: #0078c1; z-index: 3;transition: all 0.5s; font-size: 1.3vw;}
+        .content_2 article div {position: absolute; left: 0;top: 300px;width: 100%;height: 0;background: #000;opacity: 0.5; z-index: 2; transition: all 1.5s;}
+        /*아티클 비디오*/
+        .content_2 article video {position: absolute; width: 125%; height: 100%; margin-top: 0; opacity: 0;z-index: 1; transition: 1.5s;}
+        /*아티클 숨기기*/
+        .content_2 article h3 {position: absolute; bottom: 210px;right: -310px; font: 40px Raleway;
+        color: #fff;text-align: right; opacity: 1; z-index: 4; transition: all 1s;}
+        .content_2 article p {position: absolute; bottom: 50px;right: -310px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5; transition: all 1s;}
+
+        /*아티클 호버 효과*/
+        .content_2 article:hover {width: 40%; transition: all 2s;}
+        .content_2 article:hover h2 {color: #ccc; border-left: 3px solid #0078c1; cursor: pointer;}
+        .content_2 article:hover div {top: 270px;height: 70px;transition: all 2s; cursor: pointer;}
+        .content_2 article:hover video{opacity: 1; transition: all 2s;}
+        .content_2 article:hover h3{right: 10px; transition: all 2s; cursor: pointer;}
+        .content_2 article:hover p{right: 10px; transition: all 2s; cursor: pointer;}
+        
+        /*content_3*/
+        .content_3{position: relative; width: 100%; height: auto; text-align: center;}
+        .c3_map{position: absolute; top: 0;left: 0;}
+        .c3_txt{position: absolute; top: 0; left: 0%; z-index: 999; box-shadow: 3px 0px 5px #525252; }
+        .c3_txt{width: 20%; text-align: left; height: 1000px; background: #EEE; transition: 1.5s; border-radius: 0px 10px 10px 0px;}
+        .c3_txt h2{line-height: 6.2vw;text-align: center; border-radius: 0px 10px 10px 0px}
+        .area_list{display: none;}
+        .c3_list{position: absolute; left: -100%; transition: 1.5s; width: 100%;}
+        .c3_txt.Aon{height: 120px;}
+        
+        .c3_btn {
+          background: transparent;
+          font-size: 1.2vw;
+          color: #fff;
+          border-radius: 0;
+          padding: ;
+          transition: all 0.7s ease-out;
+          background: linear-gradient(-270deg, rgba(0,120,193,0.8), rgba(253,190,43,0.8), rgba(253,210,43,0), rgba(253,210,43,0));
+          background-position: 1% 50%;
+          background-size: 300% 300%;
+          border: 1px solid rgba(120,193,0,0.3);
+            
+        }
+
+        .c3_btn:hover {
+          border: 1px solid rgba(223,190,106,0);
+          color: #0078c1;
+          background-position: 99% 50%;
+          border-bottom: 7px solid #0078c1;
+            }
+        .c3_btn.Bon{
+          transition: 1.5s;
+          border: 1px solid rgba(223,190,106,0);
+          color: #0078c1;
+          background-position: 99% 50%;
+          border-bottom: 10px solid #0078c1;
+          border-radius: 0;
+        }
+        .DownMe{position: absolute; bottom: 20px;}
+        .slide-Down{-webkit-animation:slide-Down 1s cubic-bezier(.25,.46,.45,.94) infinite both;animation:slide-Down 1s cubic-bezier(.25,.46,.45,.94) infinite both;}
+        @-webkit-keyframes 
+        slide-Down{0%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(10px);transform:translateY(10px)} 100%{-webkit-transform:translateY(0);transform:translateY(0)}}
+        @keyframes 
+        slide-Down{0%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(10px);transform:translateY(10px)} 0%{-webkit-transform:translateY(0);transform:translateY(0)}}
+        .c3_list{font-family: 'Do Hyeon', sans-serif;}
+        .c3_list_title{font-size: 1vw; font-weight: 100; line-height: 3vw; border-bottom: 2px solid #0078c1; text-align: center;}
+        .c3_list.Con{left: 0; transition: 1.5s;}
+        .area_title{border-bottom: 1px solid #5252;}
+        .area_T{font-size: 1.1vw; line-height: 3vw; margin-left: 5%;}
+        .area_list>li{line-height: 1.8vw; border-bottom: 0.5px solid #5252; font-size: 1vw; text-indent: 15%; letter-spacing: 1px;}
+        .area_list>li:hover{color: #0078c1; cursor: pointer;}
+        .area_T.Don{color: #0078c1; border-color: #0078c1;}
+
+        
+        /*PartnerShip*/
+        .PartnerShip{position: relative; width: 100%; height: auto;}
+        .Partner_list{width: 100%; margin: 0 auto; text-align: center; margin-bottom: 8%;}
+        .Partner_list li{float: left; width: 33.33%; margin-top: 8%;}
+        .Partner_list:after{content: ''; display: block; clear: both;}
+        
+        
+    
+        
+        @media screen and (max-width:1350px) and (min-width: 1001px){
+            .content_1{height: auto; transition: 0.5s;}
+            .c1_txt1{position: absolute; left: 6%; top: 12%; font-size: 2vw; transition: 0.5s;}
+            .c1_txt2{position: absolute; left: 0%; top: 52%; font-size: 2vw; transition: 0.5s;}
+            .c1_txt3{position: absolute; left: 49%; top: 12%; font-size: 2vw; transition: 0.5s;}
+            .c1_txt4{position: absolute; left: 49%; top: 52%; font-size: 2vw; transition: 0.5s;}
+            .content_1 h3{color: #0078c1; font-weight: bold; transition: 0.5s;}
+            .content_1 h2 span{font-size: 10vw; line-height: 8vw; transition: 0.5s;}
+            .content_1 .light{font-size: 10vw; line-height: 8vw; transition: 0.5s;}
+            .content_1 .Click{font-size: 3vw; margin-left: 70%; transition: 0.5s;}
+            .return_content_1{font-size: 3vw; bottom: 12%; right: 41%; transition: 0.5s;}
+            .dan_bg{display: none;}
+            .content_2{height: 700px; background: #525252;}
+            .content_2 article p{display: none;}
+            .c3_txt{height: 650px;}
+            .root_daum_roughmap{height: 800px;}
+            
+        }
+        @media screen and (max-width:1000px) and (min-width:300px){
+            .content_1{height: auto; transition: 0.5s;}
+            .c1_txt1{position: absolute; left: 23%; top: 10%; font-size: 3vw; transition: 0.5s;}
+            .c1_txt2{position: absolute; left: 12%; top: 32%; font-size: 3vw; transition: 0.5s;}
+            .c1_txt3{position: absolute; left: 13%; top: 54%; font-size: 3vw; transition: 0.5s;}
+            .c1_txt4{position: absolute; left: 15%; top: 76%; font-size: 2.5vw; transition: 0.5s;}
+            .content_1 h3{color: #0078c1; font-weight: bold; transition: 0.5s;}
+            .content_1 h2 span{font-size: 10vw; line-height: 8vw; transition: 0.5s;}
+            .content_1 .light{font-size: 10vw; line-height: 8vw; transition: 0.5s;}
+            .content_1 .Click{font-size: 3vw; margin-left: 70%; transition: 0.5s;}
+            .return_content_1{font-size: 3vw; bottom: 3%; right: 42%; transition: 0.5s;}
+            .c3_txt{position: absolute; width: 100%; height: 370px;}
+            .area_T{font-size: 16px;line-height: 30px;}
+            .c3_list_title{font-size: 14px; line-height: 30px;}
+            .c3_txt.Aon {height: 60px;}
+            .c3_btn{font-size: 20px;}
+            .root_daum_roughmap{height: 500px;}
+            .dan_bg{display: none;}
+            .content_2{height: 700px; background: #525252;}
+            .content_2 article p{font-size: 0.5vw; width: 70%;}
+            .content_2 article{width: 50%;}
+            .content_2 article {width: 50%; transition: all 2s;}
+            .content_2 article:hover {width: 50%; transition: all 2s;}
+            .content_2 article>h2{font-size: 3vw;}
+            .content_2 article>h3{font-size: 2vw;}
+            .Moblie_show{width: 50%;}
+            .Moblie_hide{display: none;}
+            .content_2 article video{opacity: 1; transition: all 2s; height: 370px;}
+            .content_2 article h3{right: 10px; transition: all 2s; cursor: pointer;}
+            .content_2 article p{right: 10px; transition: all 2s; cursor: pointer;}
+
+            
+        }
+
+
+        
+    </style>
+
+
+    <!-- Demo styles -->
+    <script>
+        $(function() {
+            $("header").load("html/header.html");
+            $(".swiper").load("html/slide.html");
+            $("footer").load("html/footer.html");
+
+
+        });
+
+        $(window).on("scroll", function() {
+            var ht = $(window).height();
+            var scroll = $(window).scrollTop();
+			
+
+            $("#wrap .dan").each(function() {
+                $(this).on("mousewheel", function(e) {
+                    e.preventDefault();
+                    // e.stopPropagation()
+                    var delta = 0;
+
+                    // event > originalEvent > wheelDelta 에서 해당되는 정보를 얻을 수 있습니다. 
+                    delta = e.originalEvent.wheelDelta / 120;
+                    var moveTop = null;
+                    // console.log(e.originalEvent); 여기서 wheelDelta값을 확인힐수 있습니다.
+                    // 다음 요소 또는 이전 요소를 선택하는 방법 prev(), next()
+                     if (delta >= 0) {  
+                //변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
+                 try{
+                    var prev = $(this).prev().offset().top;
+                 } catch(e){}
+                 //문서 전체를 prev에 저장된 위치로 이동
+                 $("html,body").stop().animate({"scrollTop":prev},1000,"swing");
+
+            //마우스 휠을 내렸을때	 
+              }else if (delta <= 0) {  
+                //변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
+                try{
+                    var next = $(this).next().offset().top;
+                } catch(e){}
+
+                //문서 전체를 next에 저장된 위치로 이동
+                $("html,body").stop().animate({"scrollTop":next},1000,"swing");       
+              }	
+  
+                    });	
+	           });
+            });
+
+		
+		
+    </script>
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div id="wrap">
+        <header></header>
+
+        <!--슬라이더구역-->
+<!--        <div class="swiper-container dan"></div>-->
+        
+        <div class="contents" id="transcroller-body ">
+            <!--슬라이더구역-->
+            <div class="swiper dan"></div>
+            <div class="content_1 aos-all bg-pan-br dan">
+                <h2 class="wow pulse aos-item" data-aos="fade-down">
+                    <span class="aos-item__inner">Let's</span>
+                    <span class="aos-item__inner light">ELECTRO MART</span>
+                    <span class="aos-item__inner">Counsumer Electronics</span>
+                    <span class="aos-item__inner">IT &amp; Moblie Communications</span><br>
+                    <span class="aos-item__inner Click">Lesarn more</span>                
+                </h2>
+                <div class="ContentAfter">
+                    <div class="c1_txt1">
+                        <h3>High Quality</h3>
+                        <p style="padding-top: 1%">ELECTRO M10</p>
+                        <p>Express your sleft your way with <br>
+                            shoot like a pro. Edit on the go. Go all-<br>
+                            day. That's the Power of ELECTRO.
+                        </p>
+                    </div>
+                    <div class="c1_txt2">
+                        <h3>Save more and win</h3>
+                        <p style="padding-top: 1%">Leave a review for a chance to win</p>
+                        <p>Love your home appliance? Write a review of your <br>
+                            favorite home appliance and<br>
+                             No Purchase Necessary.
+                        </p>
+                    </div>
+                    <div class="c1_txt3">
+                        <h3>Even smarter together.</h3>
+                        <p style="padding-top: 1%">Product</p>
+                        <p>SmartThings connects ELECTRO MART<br>
+                            smart devices with each other so they can work<br>
+                            together to make your home even smarter.
+                        </p>
+                    </div>
+                    <div class="c1_txt4">
+                        <h3>HImmersive sound. Optimized for QLED. </h3>
+                        <p style="padding-top: 1%">Q Premium Soundbars</p>
+                        <p>Elevate your viewing experience with a premium<br>
+                            soundbar optimized for Samsung QLED TVs. Don't just<br>
+                           watch, but also hear and feel the drama unfold. 
+                        </p>
+                    </div>
+                    <div class="return_content_1">RETURN <i class="fa fa-undo"></i></div>
+                </div>
+               
+            </div>
+            <div class="content_2 dan">
+            <video autoplay="autoplay" loop="loop" muted width="100%" height="100%" class="dan_bg">
+            <source type="video/mp4" src="images/vfx1.mp4">
+            </video>
+            <!--    article-->
+            <article class="Moblie_show">
+                <h2>Moblie</h2>
+                <video loop preload="auto" muted autoplay>
+                    <source src="images/vid1.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>ELECTRO NOTE</h3>
+                <p>믿기 어려울 정도로 슬림한 디자인<br>
+                고광택 메탈과 글래스가 전후면에 매끄럽게 이어집니다. 견고한 아름다움을 놀랍도록 얆은 두께에 담아냈죠.</p>
+            </article>
+
+            <article class="Moblie_show">
+                <h2>DeskTop</h2>
+                <video loop preload="auto" muted autoplay>
+                    <source src="images/vid2.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>ELECTRO 노트북</h3>
+                <p>이기기 위한 극강의 퍼포먼스<br>
+                ELECTRO 노트북은 강력한 쿠링 성능을 바탕으로 장시간 게임에도 강력하고 안정적인 게이밍 퍼포먼스<br>
+                최적의 게이밍 환경에서 게이밍 경험을 느껴보세요.</p>
+            </article>
+
+            <article class="Moblie_hide">
+                <h2>Refrigerator</h2>
+                <video loop preload="auto" muted autoplay>
+                    <source src="images/vid3.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>ELECTRO 냉장고</h3>
+                <p>냉장고 정리 이것만 알면 끝!<br>
+                어디서부터 어떻게 해야할지 모르겠는 냉장고 정리,<br>
+                깔끔하게 정리하는 방법을 소개해드립니다.</p>
+            </article>
+
+            <article class="Moblie_hide">
+                <h2>Air Conditioner</h2>
+                <video loop preload="auto" muted autoplay>
+                    <source src="images/vid4.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>ELECTRO 에어컨</h3>
+                <p>거실 일부만 시원해지는 에어컨?<br>
+                무풍갤러리는 최대 3개의 팬이 강력한 냉기를 뿜어내고 서큘레이터 팬의 순환 기류를 만들어 주어 공간을 빠르게 시원하게 만들어 줍니다.</p>
+            </article>
+            <article class="Moblie_hide">
+                <h2>Clothes Washer</h2>
+                <video loop preload="auto" muted autoplay>
+                    <source src="images/vid5.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>ELECTRO 세탁기</h3>
+                <p>국내 유일 일체형 올인원 세탁기<br>
+                버블워시로 더 빠르고 꺠끗하게 세탁물 추가도 언제든지 풍부한 버블이 옷감 사이사이 빠르고 깨끗하게 깜빡하고 빠드린 옷도 '쓱' 간편하게 추가하세요.</p>
+            </article>
+            <article class="Moblie_hide">
+                <h2>High-End Audio</h2>
+                <video loop preload="auto" muted autoplay>
+                    <source src="images/vid6.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>ELECTRO 오디오</h3>
+                <p>존재만으로 울림이 되다.<br>
+                초창기 ‘증폭’ 개념의 앰프에서 머물렀던 시기에 모듈 기반의 앰프로 잡음이 거의 나지 않던
+                마크 레빈슨의 출현은 모두에게 큰 충격이었습니다. 그 후 하이파이 앰프들이 마크 레빈슨으로부터
+                영감을 받아 출시되었을 만큼<br> 매우 큰 영향력을 주고 있습니다.</p>
+            </article>
+            
+
+        </div>
+        <div class="content_3 dan">
+             <div class="c3_txt Aon">
+                 <h2 class="c3_btn">FIND A #ELECRO MART<br>
+                 <i class="DownMe fa fa-chevron-down slide-Down"></i></h2>
+                 <div class="c3_list">
+                     <p class="c3_list_title">지역을 선택해 주세요.</p>
+                     <ul clas="main_area">
+                         <li class="area_title"><span class="aT_1 area_T">서울특별시</span>
+                         <ul class="area_list aT_s1">
+                             <li class="c3_a1">가든5점</li>
+                             <li class="c3_a2">논현점</li>
+                             <li class="c3_a3">명일점</li>
+                             <li class="c3_a4">영등포점</li>
+                             <li class="c3_a5">왕십리점</li>
+                             <li class="c3_a6">은평점</li>
+                             <li class="c3_a7">자양점</li>
+                             <li class="c3_a8">천호점</li>
+                             <li class="c3_a9">창동점</li>
+                         </ul></li>
+                         
+                         <li class="area_title"><span class="aT_2 area_T">경기도 &amp; 인천</span>
+                         <ul class="area_list aT_s2">
+                             <li class="c3_b1">고잔점</li>
+                             <li class="c3_b2">김포점</li>
+                             <li class="c3_b3">다산점</li>
+                             <li class="c3_b4">동탄점</li>
+                             <li class="c3_b5">서수원점</li>
+                             <li class="c3_b6">수지점</li>
+                             <li class="c3_b7">수원점</li>
+                             <li class="c3_b9">스타필드 고양점</li>
+                             <li class="c3_b10">스타필드 하남점</li>
+                             <li class="c3_b11">스타필드 부천점</li>
+                             <li class="c3_b13">위례점</li>
+                             <li class="c3_b14">의왕점</li>
+                             <li class="c3_b15">죽전점</li>
+                             <li class="c3_b16">중동점</li>
+                             <li class="c3_b17">킨텍스점</li>
+
+                         </ul></li>
+                         <li class="area_title"><span class="aT_3 area_T">경상도 &amp;부산 &amp; 대구 &amp; 울산</span>
+                         <ul class="area_list aT_s3">
+                             <li class="c3_c1">김해점</li>
+                             <li class="c3_c2">부산광역시 금정점</li>
+                             <li class="c3_c3">부산광역시 센텀점</li>
+                             <li class="c3_c4">울산광역시 울산점</li>
+                             <li class="c3_c5">구미점</li>
+                             <li class="c3_c6">대구광역시 대구점</li>
+                             <li class="c3_c7">대구광역시 월배점</li>
+                         </ul></li>
+                         <li class="area_title"><span class="aT_4 area_T">충청도 &amp; 대전</span>
+                         <ul  class="area_list aT_s4">
+                             <li class="c3_d1">대전광역시 대전터미널점</li>
+                             <li class="c3_d2">청주점</li>
+                         </ul></li>
+                         <li class="area_title"><span class="aT_5 area_T">전라도</span>
+                        <ul class="area_list aT_s5">
+                             <li class="c3_f1">목포점</li>                        
+                             <li class="c3_f2">전주점</li>
+                         </ul></li>
+                         <li class="area_title"><span class="aT_6 area_T">제주도</span>
+                        <ul class="area_list aT_s6">
+                             <li class="c3_g1">신제주점</li>
+                         </ul></li>
+                     </ul>
+                 </div>
+             </div>
+              <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <div id="daumRoughmapContainer1569553803312" class="root_daum_roughmap root_daum_roughmap_landing c3_map1"></div>
+                <div id="daumRoughmapContainer1569568311979" class="root_daum_roughmap root_daum_roughmap_landing c3_map2"></div>
+                <div id="daumRoughmapContainer1569567152667" class="root_daum_roughmap root_daum_roughmap_landing c3_map3"></div>
+                <div id="daumRoughmapContainer1569568350411" class="root_daum_roughmap root_daum_roughmap_landing c3_map4"></div>
+                <div id="daumRoughmapContainer1569568400972" class="root_daum_roughmap root_daum_roughmap_landing c3_map5"></div>
+                <div id="daumRoughmapContainer1569568419291" class="root_daum_roughmap root_daum_roughmap_landing c3_map6"></div>
+                <div id="daumRoughmapContainer1569568442179" class="root_daum_roughmap root_daum_roughmap_landing c3_map7"></div>
+                <div id="daumRoughmapContainer1569568456371" class="root_daum_roughmap root_daum_roughmap_landing c3_map8"></div>
+                <div id="daumRoughmapContainer1569568469875" class="root_daum_roughmap root_daum_roughmap_landing c3_map9"></div>
+                <div id="daumRoughmapContainer1569568505042" class="root_daum_roughmap root_daum_roughmap_landing c3_map10"></div>
+                <div id="daumRoughmapContainer1569568596340" class="root_daum_roughmap root_daum_roughmap_landing c3_map11"></div>
+                <div id="daumRoughmapContainer1569568609675" class="root_daum_roughmap root_daum_roughmap_landing c3_map12"></div>
+                <div id="daumRoughmapContainer1569568628291" class="root_daum_roughmap root_daum_roughmap_landing c3_map13"></div>
+                <div id="daumRoughmapContainer1569568640395" class="root_daum_roughmap root_daum_roughmap_landing c3_map14"></div>
+                <div id="daumRoughmapContainer1569568654531" class="root_daum_roughmap root_daum_roughmap_landing c3_map15"></div>
+                <div id="daumRoughmapContainer1569568671955" class="root_daum_roughmap root_daum_roughmap_landing c3_map16"></div>
+                <div id="daumRoughmapContainer1569568683547" class="root_daum_roughmap root_daum_roughmap_landing c3_map17"></div>
+                <div id="daumRoughmapContainer1569568699987" class="root_daum_roughmap root_daum_roughmap_landing c3_map18"></div>
+                <div id="daumRoughmapContainer1569568715316" class="root_daum_roughmap root_daum_roughmap_landing c3_map19"></div>
+                <div id="daumRoughmapContainer1569568740891" class="root_daum_roughmap root_daum_roughmap_landing c3_map20"></div>
+                <div id="daumRoughmapContainer1569568749547" class="root_daum_roughmap root_daum_roughmap_landing c3_map21"></div>
+                <div id="daumRoughmapContainer1569568760843" class="root_daum_roughmap root_daum_roughmap_landing c3_map22"></div>
+                <div id="daumRoughmapContainer1569568774363" class="root_daum_roughmap root_daum_roughmap_landing c3_map23"></div>
+                <div id="daumRoughmapContainer1569568786419" class="root_daum_roughmap root_daum_roughmap_landing c3_map24"></div>
+                <div id="daumRoughmapContainer1569568799579" class="root_daum_roughmap root_daum_roughmap_landing c3_map25"></div>
+                <div id="daumRoughmapContainer1569568808531" class="root_daum_roughmap root_daum_roughmap_landing c3_map26"></div>
+                <div id="daumRoughmapContainer1569568818517" class="root_daum_roughmap root_daum_roughmap_landing c3_map27"></div>
+                <div id="daumRoughmapContainer1569568818517" class="root_daum_roughmap root_daum_roughmap_landing c3_map28"></div>
+                <div id="daumRoughmapContainer1569568882931" class="root_daum_roughmap root_daum_roughmap_landing c3_map29"></div>
+                <div id="daumRoughmapContainer1569568901436" class="root_daum_roughmap root_daum_roughmap_landing c3_map30"></div>
+                <div id="daumRoughmapContainer1569568911971" class="root_daum_roughmap root_daum_roughmap_landing c3_map31"></div>
+                <div id="daumRoughmapContainer1569568922811" class="root_daum_roughmap root_daum_roughmap_landing c3_map32"></div>
+                <div id="daumRoughmapContainer1569568939459" class="root_daum_roughmap root_daum_roughmap_landing c3_map33"></div>
+                <div id="daumRoughmapContainer1569568958171" class="root_daum_roughmap root_daum_roughmap_landing c3_map34"></div>
+                <div id="daumRoughmapContainer1569568971036" class="root_daum_roughmap root_daum_roughmap_landing c3_map35"></div>
+                <div id="daumRoughmapContainer1569568982179" class="root_daum_roughmap root_daum_roughmap_landing c3_map36"></div>
+                <div id="daumRoughmapContainer1569568992387" class="root_daum_roughmap root_daum_roughmap_landing c3_map37"></div>
+                <div id="daumRoughmapContainer1569569018324" class="root_daum_roughmap root_daum_roughmap_landing c3_map38"></div>
+                <div id="daumRoughmapContainer1569569008106" class="root_daum_roughmap root_daum_roughmap_landing c3_map39"></div>
+                <div id="daumRoughmapContainer1569569018324" class="root_daum_roughmap root_daum_roughmap_landing c3_map40"></div>
+                <div id="daumRoughmapContainer1569569050723" class="root_daum_roughmap root_daum_roughmap_landing c3_map41"></div>
+                <!--2. 설치 스크립트-->
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                <!-- 3. 실행 스크립트 -->
+                <script charset="UTF-8">
+                    $(function() {
+                        $(".c3_map1").show();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+
+                        /*가든5점*/
+                        $(".c3_a1").one('click',function(){
+                        $(".c3_map2").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568311979",
+		                    "key" : "v7mq",
+                            "mapWidth" : "1920",
+                             "mapHeight" : "1080"
+                        }).render();
+                        });
+                        /*논현점*/
+                        $(".c3_a2").one('click',function(){
+                        $(".c3_map3").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569567152667",
+                            "key" : "v7m6",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+                        /*명일점*/
+                        $(".c3_a3").one('click',function(){
+                        $(".c3_map4").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();                            
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568350411",
+                            "key" : "v7ms",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+//                        영등포점
+                        $(".c3_a4").one('click',function(){
+                        $(".c3_map5").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut(); 
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568400972",
+		                      "key" : "v7mv",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        왕십리 a5
+                        $(".c3_a5").one('click',function(){
+                            $(".c3_map6").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut(); 
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568419291",
+		                    "key" : "v7mw",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });                        
+////                        은평 a6
+                        $(".c3_a6").one('click',function(){
+                            $(".c3_map7").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut(); 
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568442179",
+		                    "key" : "v7mx",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        자양 a7
+                        $(".c3_a7").one('click',function(){
+                        $(".c3_map8").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut(); 
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568456371",
+		                    "key" : "v7my",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        천호 a8
+                        $(".c3_a8").one('click',function(){
+                        $(".c3_map9").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut(); 
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568469875",
+		                      "key" : "v7nz",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        창동 a9
+                        $(".c3_a9").one('click',function(){
+                            $(".c3_map10").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568505042",
+		                  "key" : "v7n2",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        고잔 b1
+                        $(".c3_b1").one('click',function(){
+                        $(".c3_map11").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568596340",
+		                  "key" : "v7n6",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        김포 b2
+                        $(".c3_b2").one('click',function(){
+                            $(".c3_map12").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568609675",
+		                      "key" : "v7n7",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        다산 b3
+                        $(".c3_b3").one('click',function(){
+                            $(".c3_map13").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568628291",
+		"key" : "v7n8",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        동탄 b4
+                        $(".c3_b4").one('click',function(){
+                            $(".c3_map14").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568640395",
+		"key" : "v7na",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        서수원 b5
+                        $(".c3_b5").one('click',function(){
+                            $(".c3_map15").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568654531",
+		"key" : "v7nb",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        수지 b6
+                        $(".c3_b6").one('click',function(){
+                            $(".c3_map16").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568671955",
+		"key" : "v7nc",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        수원 b7
+                        $(".c3_b7").one('click',function(){
+                            $(".c3_map17").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568683547",
+		"key" : "v7ne",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        고양 b8
+                        $(".c3_b8").one('click',function(){
+                            $(".c3_map18").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568699987",
+		"key" : "v7nf",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        하남 b9
+                        $(".c3_b9").one('click',function(){
+                            $(".c3_map19").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568715316",
+		"key" : "v7ng",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        부천 b10
+                        $(".c3_b10").one('click',function(){
+                            $(".c3_map20").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568740891",
+		"key" : "v7ni",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        연수 b11
+                        $(".c3_b11").one('click',function(){
+                            $(".c3_map21").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568749547",
+		"key" : "v7nj",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        위례 b12
+                        $(".c3_b12").one('click',function(){
+                            $(".c3_map22").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568749547",
+		"key" : "v7nj",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        의왕 b13
+                        $(".c3_b13").one('click',function(){
+                            $(".c3_map23").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568774363",
+		"key" : "v7nn",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        죽전 b14
+                        $(".c3_b14").one('click',function(){
+                            $(".c3_map24").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568786419",
+		"key" : "v7np",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        중동 b15
+                        $(".c3_b15").one('click',function(){
+                            $(".c3_map25").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568799579",
+		"key" : "v7nq",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        킨텍스 b16
+                        $(".c3_b16").one('click',function(){
+                            $(".c3_map26").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568808531",
+		"key" : "v7nr",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        판교 b17
+                        $(".c3_b17").one('click',function(){
+                            $(".c3_map27").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568818517",
+		"key" : "v7nt",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        평촌 b18
+                        $(".c3_b18").one('click',function(){
+                            $(".c3_map28").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568818517",
+		"key" : "v7nt",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        김해 c1
+                        $(".c3_c1").one('click',function(){
+                            $(".c3_map29").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568882931",
+		"key" : "v7nv",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        금정 c2
+                        $(".c3_c2").one('click',function(){
+                            $(".c3_map30").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568901436",
+		"key" : "v7ny",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        센텀 c3
+                        $(".c3_c3").one('click',function(){
+                            $(".c3_map31").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568911971",
+		"key" : "v7oz",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        울산 c4
+                        $(".c3_c4").one('click',function(){
+                            $(".c3_map32").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568922811",
+		"key" : "v7o2",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        구미 c5
+                        $(".c3_c5").one('click',function(){
+                            $(".c3_map33").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568939459",
+		"key" : "v7o3",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        대구 c6
+                        $(".c3_c6").one('click',function(){
+                            $(".c3_map34").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568958171",
+		"key" : "v7o4",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        월배 c7
+                        $(".c3_c7").one('click',function(){
+                            $(".c3_map35").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568971036",
+		"key" : "v7o5",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        대전터미널 d1
+                        $(".c3_d1").one('click',function(){
+                            $(".c3_map36").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568982179",
+		"key" : "v7o6",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        청주 d2
+                        $(".c3_d2").one('click',function(){
+                            $(".c3_map37").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569568992387",
+		"key" : "v7o7",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        목포 f1
+                        $(".c3_f1").one('click',function(){
+                            $(".c3_map38").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569569018324",
+		"key" : "v7o9",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        전주 f2
+                        $(".c3_f2").one('click',function(){
+                            $(".c3_map39").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map40").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569569008106",
+		"key" : "v7o8",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        진주 f3
+                        $(".c3_f3").one('click',function(){
+                            $(".c3_map40").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map41").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569569018324",
+		"key" : "v7o9",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+////                        신제주 g1
+                        $(".c3_g1").one('click',function(){
+                            $(".c3_map41").fadeIn();
+                        $(".c3_map1").fadeOut();
+                        $(".c3_map2").fadeOut();
+                        $(".c3_map3").fadeOut();
+                        $(".c3_map4").fadeOut();
+                        $(".c3_map5").fadeOut();
+                        $(".c3_map6").fadeOut();
+                        $(".c3_map7").fadeOut();
+                        $(".c3_map8").fadeOut();
+                        $(".c3_map9").fadeOut();
+                        $(".c3_map10").fadeOut();
+                        $(".c3_map11").fadeOut();
+                        $(".c3_map12").fadeOut();
+                        $(".c3_map13").fadeOut();
+                        $(".c3_map14").fadeOut();
+                        $(".c3_map15").fadeOut();
+                        $(".c3_map16").fadeOut();
+                        $(".c3_map17").fadeOut();
+                        $(".c3_map18").fadeOut();
+                        $(".c3_map19").fadeOut();
+                        $(".c3_map20").fadeOut();
+                        $(".c3_map21").fadeOut();
+                        $(".c3_map22").fadeOut();
+                        $(".c3_map23").fadeOut();
+                        $(".c3_map24").fadeOut();
+                        $(".c3_map25").fadeOut();
+                        $(".c3_map26").fadeOut();
+                        $(".c3_map27").fadeOut();
+                        $(".c3_map28").fadeOut();
+                        $(".c3_map29").fadeOut();
+                        $(".c3_map30").fadeOut();
+                        $(".c3_map31").fadeOut();
+                        $(".c3_map32").fadeOut();
+                        $(".c3_map33").fadeOut();
+                        $(".c3_map34").fadeOut();
+                        $(".c3_map35").fadeOut();
+                        $(".c3_map36").fadeOut();
+                        $(".c3_map37").fadeOut();
+                        $(".c3_map38").fadeOut();
+                        $(".c3_map39").fadeOut();
+                        $(".c3_map40").fadeOut();
+                            new daum.roughmap.Lander({
+                            "timestamp" : "1569569050723",
+		"key" : "v7ob",
+                            "mapWidth" : "1920",
+                            "mapHeight" : "1080"
+                        }).render();
+                        });
+//                        
+//                        
+                    new daum.roughmap.Lander({
+                        "timestamp" : "1569553803312",
+                        "key" : "v7fe",
+                        "mapWidth" : "1920",
+                        "mapHeight" : "1080"
+                    }).render();
+                    });
+            </script>
+        </div>
+        <div class="PartnerShip dan">
+            <ul class="Partner_list">
+                <li><img src="images/Partner/P1.png" alt="파트너사1" width="40%"></li>
+                <li><img src="images/Partner/p2.png" alt="파트너사2" width="40%"></li>
+                <li><img src="images/Partner/p3.png" alt="파트너사3" width="60%"></li>
+                <li><img src="images/Partner/p4.png" alt="파트너사4" width="40%"></li>
+                <li><img src="images/Partner/p5.png" alt="파트너사5" width="40%"></li>
+                <li><img src="images/Partner/p6.png" alt="파트너사6" width="40%"></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+
+
+
+        <!--footer-->
+        <footer></footer>
+    </div>
+
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/aos.js"></script>
+        <script>
+            $(function() {
+                $(".c3_btn").click(function(){
+                $(".c3_txt").toggleClass("Aon");
+                $(".DownMe").toggleClass("fa-chevron-down");
+                $(".c3_btn").toggleClass("Bon");
+                $(".c3_list").toggleClass("Con");
+                });
+                
+                $(".aT_1").stop().click(function(){
+                    $(".c3_list_title").html("서울 특별시");
+                    $(".area_T.aT_1").toggleClass("Don");
+                    $(".area_T.aT_2").removeClass("Don");
+                    $(".area_T.aT_3").removeClass("Don");
+                    $(".area_T.aT_4").removeClass("Don");
+                    $(".area_T.aT_5").removeClass("Don");
+                    $(".area_T.aT_6").removeClass("Don");
+                    $(".aT_s1").slideToggle();
+                    $(".aT_s2").slideUp();
+                    $(".aT_s3").slideUp();
+                    $(".aT_s4").slideUp();
+                    $(".aT_s5").slideUp();
+                    $(".aT_s6").slideUp();
+                });
+                $(".aT_2").stop().click(function(){
+                    $(".c3_list_title").html("경기도 &amp; 인천");
+                    $(".area_T.aT_2").toggleClass("Don");
+                    $(".area_T.aT_1").removeClass("Don");
+                    $(".area_T.aT_3").removeClass("Don");
+                    $(".area_T.aT_4").removeClass("Don");
+                    $(".area_T.aT_5").removeClass("Don");
+                    $(".area_T.aT_6").removeClass("Don");
+                    $(".aT_s2").slideToggle();
+                    $(".aT_s1").slideUp();
+                    $(".aT_s3").slideUp();
+                    $(".aT_s4").slideUp();
+                    $(".aT_s5").slideUp();
+                    $(".aT_s6").slideUp();
+                });
+                $(".aT_3").stop().click(function(){
+                    $(".c3_list_title").html("경상도 &amp;부산 &amp; 대구 &amp; 울산");
+                    $(".area_T.aT_3").toggleClass("Don");
+                    $(".area_T.aT_1").removeClass("Don");
+                    $(".area_T.aT_2").removeClass("Don");
+                    $(".area_T.aT_4").removeClass("Don");
+                    $(".area_T.aT_5").removeClass("Don");
+                    $(".area_T.aT_6").removeClass("Don");
+                    $(".aT_s3").slideToggle();
+                    $(".aT_s1").slideUp();
+                    $(".aT_s2").slideUp();
+                    $(".aT_s4").slideUp();
+                    $(".aT_s5").slideUp();
+                    $(".aT_s6").slideUp();
+                });
+                $(".aT_4").stop().click(function(){
+                    $(".c3_list_title").html("충청도 &amp; 대전");
+                    $(".area_T.aT_4").toggleClass("Don");
+                    $(".area_T.aT_1").removeClass("Don");
+                    $(".area_T.aT_2").removeClass("Don");
+                    $(".area_T.aT_3").removeClass("Don");
+                    $(".area_T.aT_5").removeClass("Don");
+                    $(".area_T.aT_6").removeClass("Don");
+                    $(".aT_s4").slideToggle();
+                    $(".aT_s1").slideUp();
+                    $(".aT_s2").slideUp();
+                    $(".aT_s3").slideUp();
+                    $(".aT_s5").slideUp();
+                    $(".aT_s6").slideUp();
+                });
+                $(".aT_5").stop().click(function(){
+                    $(".c3_list_title").html("전라도");
+                    $(".area_T.aT_5").toggleClass("Don");
+                    $(".area_T.aT_1").removeClass("Don");
+                    $(".area_T.aT_2").removeClass("Don");
+                    $(".area_T.aT_3").removeClass("Don");
+                    $(".area_T.aT_4").removeClass("Don");
+                    $(".area_T.aT_6").removeClass("Don");
+                    $(".aT_s5").slideToggle();
+                    $(".aT_s1").slideUp();
+                    $(".aT_s2").slideUp();
+                    $(".aT_s3").slideUp();
+                    $(".aT_s4").slideUp();
+                    $(".aT_s6").slideUp();
+                });
+                $(".aT_6").click(function(){
+                    $(".c3_list_title").html("제주도");
+                    $(".area_T.aT_6").toggleClass("Don");
+                    $(".area_T.aT_1").removeClass("Don");
+                    $(".area_T.aT_2").removeClass("Don");
+                    $(".area_T.aT_3").removeClass("Don");
+                    $(".area_T.aT_5").removeClass("Don");
+                    $(".area_T.aT_4").removeClass("Don");
+                    $(".aT_s6").slideToggle();
+                    $(".aT_s1").slideUp();
+                    $(".aT_s2").slideUp();
+                    $(".aT_s3").slideUp();
+                    $(".aT_s4").slideUp();
+                    $(".aT_s5").slideUp();
+                });
+                
+                $(".c1_txt1").hide();
+                $(".c1_txt2").hide();
+                $(".c1_txt3").hide();
+                $(".c1_txt4").hide();
+                $(".return_content_1").hide();
+            var contents = $("#wrap .dan");
+
+            $(document).scroll(function() {
+                var sct = $(document).scrollTop();
+
+                contents.each(function() {
+                    var tg = $(this);
+                    var i = tg.index();
+                    var num = tg.offset().top
+                    if (num == 0) {
+                        var tg = $(this);
+                        var i = tg.index(); 
+
+                        if (i == 0) {
+                           AOS.init({
+                            offset: 200,
+                            duration: 700,
+                            easing: 'ease-in-sine',
+                            delay: 150,
+                        }); 
+                        $(".c1_txt1").stop().hide();
+                        $(".c1_txt2").stop().hide();
+                        $(".c1_txt3").stop().hide();
+                        $(".c1_txt4").stop().hide();
+                        $(".return_content_1").stop().hide();
+                        $(".content_1>h2 span").stop().show();
+                       } 
+                    }
+                });
+            });
+                $(".content_1 .Click").click(function(){
+                    $(".bg-pan-br").css({"animation":"bg-pan-br1 30s both"});
+                    $(".content_1>h2 span").fadeOut(2000);
+                    $(".c1_txt1").delay(2500).fadeIn(2000);
+                    $(".c1_txt2").delay(5000).fadeIn(2000);
+                    $(".c1_txt3").delay(7500).fadeIn(2000);
+                    $(".c1_txt4").delay(10000).fadeIn(2000);
+                    $(".return_content_1").delay(20000).fadeIn(2000);
+                    
+                });
+                $(".return_content_1").click(function(){
+                    $(".bg-pan-br").css({"animation":"bg-pan-br2 10s both"});
+                    $(".fa-undo").delay(10000).removeClass("fa-spin");
+                    $(".c1_txt1").fadeOut(500);
+                    $(".c1_txt2").fadeOut(500);
+                    $(".c1_txt3").fadeOut(500);
+                    $(".c1_txt4").fadeOut(500);
+                    $(".return_content_1").delay(10000).fadeOut(500);
+                    $(".content_1>h2 span").show();
+                    
+                });
+                $(".return_content_1").mouseenter(function(){
+                    $(".fa-undo").stop().addClass("fa-spin");                    
+                });
+                $(".return_content_1").mouseleave(function(){
+                    $(".fa-undo").stop().delay(10000).addClass("fa-spin");                    
+                });
+            });
+            
+        </script>
+
+
+</body>
+
+</html>

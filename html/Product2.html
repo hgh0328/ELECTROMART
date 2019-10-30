@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/aos.js"></script>
+
+    <style>
+        /*defult setting*/
+        em {
+            font-style: normal;
+        }
+
+        #wrap {
+
+            max-height: 1080px;
+            max-width: 100%;
+
+        }
+
+        body {
+            width: 100%;
+            background: #eee;
+            
+        }
+
+        header {
+            z-index: 9999;
+            height: auto;
+            background: #000;
+            color: #000;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-trank {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: steelblue;
+        }
+
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            width: 10px;
+            height: 10px;
+            background: steelblue;
+        }
+
+    </style>
+    <style>
+        /*Product_Title*/
+        .Title {
+            background-image: url(../images/Product/Pro_bg3.png);
+            background-size: cover;
+            width: 100%;
+            height: 1080px;
+            background-position: center;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-attachment: scroll;
+             transition: 0.5s;
+            overflow-x: hidden;
+        }
+        .Title1 {
+            background-image: url(../images/Product/KA/kc_bg.png);
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+            background-position: top;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-attachment: fixed;
+             transition: 0.5s;
+        }
+
+        .Product_nav {
+            width: 13%;
+            position: relative;
+            left: 2%;
+            top: 16%;
+            transition: 0.5s;
+        }
+
+        .Product_nav li {
+            float: left;
+            width: 20%;
+            color: #fff;
+            font-size: 0.6vw;
+            line-height: 1vw;
+             transition: 0.5s;
+        }
+
+        .Product_nav:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .Title h2 {
+            
+            position: relative;
+            text-align: left;
+            top: 17%;
+            font-size: 2.3vw;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+             transition: 0.5s;
+        }
+        .Title1 h2 {
+            
+            position: relative;
+            text-align: center;
+            top: 15%;
+            font-size: 2.3vw;
+            color: #251e1e;
+            letter-spacing: 0.2vw;
+            padding-left: 3%;
+             transition: 0.5s;
+        }
+        .Pro_Title {
+            font-weight: bold;
+            position: relative;
+            top: 62%;
+            font-size: 1vw;
+            text-align: left;
+            line-height: 3vw;
+            left: 0%;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+             transition: 0.5s;
+        }
+        .Pro_Title1 {
+            font-weight: bold;
+            position: relative;
+            top: 15%;
+            font-size: 1vw;
+            text-align: center;
+            line-height: 3vw;
+            color: #251e1e;
+            letter-spacing: 0.2vw;
+            padding-right: 18%;
+             transition: 0.5s;
+        }
+        .pro_subTxt{
+            
+            position: relative;
+            top: 60%;
+            text-align: left;    
+            font-size: 0.7vw;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+             transition: 0.5s;
+        }
+        .pro_subTxt1{
+            font-weight: bold;
+            position: relative;
+            top: 10%;
+            text-align: left;    
+            font-size: 0.7vw;
+            color: #251e1e;
+            letter-spacing: 0.2vw;
+            padding-left: 35.1%;
+            transition: 0.5s;
+        }
+
+        .Title .fa-chevron-right {
+            color: #9d9d9d;
+            font-size: 0.6vw;
+            line-height: 1vw;
+        }
+        .Title .fa-angle-double-down{
+            position: absolute;
+            font-size: 5vw;
+            color: #fff;
+            top: 89%;
+            left: 48.4%;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .Title .fa-angle-double-down:hover{animation: none; color: steelblue; bottom: 0; transition: 0.5s;}
+        .slide-bottom{-webkit-animation:slide-bottom 1s infinite alternate forwards;animation:slide-bottom 1s infinite alternate forwards}
+        @-webkit-keyframes slide-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(30px);transform:translateY(30px)}}@keyframes slide-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(30px);transform:translateY(30px)}}
+        
+     
+        
+        /*냉장고 김치냉장고*/
+        .Product_KA1{font-family: 'Roboto', sans-serif; position: relative; width: 100%; margin: 0 auto; text-align: center; margin-bottom: 4%; overflow: hidden;}
+        .Product_KA1>h2{margin-top: 3%; font-size: 2vw;}
+        .Product_KA1>p{margin-bottom: 1%; font-size: 1.2vw; line-height: 2vw;}
+        .Product_KA1 .swiper-container{width: 80%; margin: 0 auto;}
+        .swiper-slide>p{font-size: 1vw; font-weight: bold; line-height:0 }
+        .swiper-slide>span{font-size: 0.7vw; line-height: 1vw}
+        
+
+
+        
+        
+        
+        
+
+    </style>
+    <style>
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+        .Title{height: 500px; transition: 0.5s;}
+        .Product_nav{top: 35%; transition: 0.5s; width: 20%;}
+        .Title h2 {top: 35%; transition: 0.5s;}
+        .Pro_Title{font-size: 2vw;left: 0%; transition: 0.5s;}
+        .pro_subTxt{font-size: 1.3vw; transition: 0.5s;}
+        .Pro_Title1{font-size: 1.5vw;transition: 0.5s; margin-left: 5%;}
+        .pro_subTxt1{font-size: 1.0vw; transition: 0.5s;}
+        }
+
+        @media screen and (max-width:1000px) and (min-width:300px) {
+        .Title{height: 400px; transition: 0.5s;}
+        .Product_nav{top: 25%; transition: 0.5s; width:43%;}
+            .Product_nav li{width: 20%;}
+        .Title h2 {top: 32%; transition: 0.5s; margin-left: 2.5%; font-size: 5vw;}
+        .Pro_Title{font-size: 2.2vw;left: 0%; transition: 0.5s; top: 40%;}
+        .pro_subTxt{font-size: 2.0vw; transition: 0.5s; white-space: nowrap; top: 40%;}
+            
+        .Title1{height: 300px; transition: 0.5s;}
+        .Title1 h2 {top: 12%; transition: 0.5s; margin-left: 2.5%; font-size: 5vw;}
+        .Pro_Title1{font-size: 2.5vw;transition: 0.5s; top: 40%; text-align: left; text-indent: 1vw;}
+        .pro_subTxt1{font-size: 2.0vw; transition: 0.5s;  top: 40%; padding-left: 1.1%;}
+            
+        .Product_KA1>h2{margin-top: 3%; font-size: 5vw;}
+        .Product_KA1>p{margin-bottom: 1%; font-size: 2.2vw; line-height: 3vw;}
+        .swiper-button-next{display: none;}
+        .swiper-button-prev{display: none;}
+            
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+            $("nav").load("Product_nav.html");
+            
+            $(".slide-bottom").click(function(){
+                var move = $(".Product_KA1").offset();
+                $('html, body').animate({scrollTop : move.top},1000);
+            }); 
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div id="wrap">
+        <header></header>
+        <div id="transcroller-body" class="aos-all">
+            <div class="aos-item Title">
+                <ul class="Product_nav" data-aos="fade-right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./Product1.html">Product</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./Product1.html">주방가전</a></li>
+                </ul>
+                <h2 class="aos-item__inner" data-aos="fade-right"><a href="./Product1.html">Kitchen Appliances</a></h2>
+                <p class="aos-item__inner Pro_Title" data-aos="fade-right">
+                처음으로 당신에게 맞춘 냉장고를 만나보세요.</p><br>
+                <p class="aos-item__inner pro_subTxt" data-aos="fade-right">
+                  ELECTRO BESPOKE는 사람마다 모두 다른 라이프 스타일<br>
+                   냉장고도 달라져야 하지 않을까요?<br>
+                   내게 딱 맞는 조합과 컬러로 이제, 냉장고도 나답게.</p>
+                   <i class="fa fa-angle-double-down slide-bottom"></i>                  
+    </div> 
+                <div class="Product_KA1" id="KA_1">
+                <h2>BESPOKE 냉장고</h2>
+                <p>시대를 넘어서는 명작!<p>
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_1.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE</p><br>
+                  <span>시대를 넘어선 명작</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_2.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE A</p><br>
+                  <span>타임리스 메탈쿨링 시스템</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_3.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE B</p><br>
+                  <span>신섬함이 살아있는 정온냉동</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_4.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE O</p><br>
+                  <span>프리미엄 디자인 키친 핏 디자인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_5.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE C</p><br>
+                  <span>나만의 작은 세상</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_6.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE 9</p><br>
+                  <span>풀 터치 스크린으로 편리하게</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_7.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE W</p><br>
+                  <span>새로운 가능성을 열다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_8.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE Q</p><br>
+                  <span>컬러풀하면서 강력한</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka1_9.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE N</p><br>
+                  <span>실용성을 강조한 최고의 성능</span></div>
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+                  <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_1.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 S</p><br>
+                                  <span>가구를 맞추든 가전을 맞추다</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_2.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 A</p><br>
+                                  <span>옹량은 넉넉하게 공간은 슬림하게</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_3.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 B</p><br>
+                                  <span>스마트한 키친 라이프</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_4.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 O</p><br>
+                                  <span>식재료에 맞춰 수납을 편리하게</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_5.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 C</p><br>
+                                  <span>다양한 키친테리어</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_6.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 9</p><br>
+                                  <span>시간이 지나도 변치 않는 프리미엄</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_7.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 W</p><br>
+                                  <span>타임리스 메탈쿨링과 독보적인 미세정온</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_8.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 Q</p><br>
+                                  <span>고급스러운 메탈 디자인</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka2_9.png" alt="KA_1">
+                                  <p>ELECTRO 셰프컬렉션 N</p><br>
+                                  <span>셰프의 노하우가 담긴 전문공간</span></div>
+                                </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+</div>
+                  <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_1.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브</p><br>
+                                  <span>변치 않는 신섬함</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_2.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 A</p><br>
+                                  <span>변치 않는 품격</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_3.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 B</p><br>
+                                  <span>변치 않는 전문성</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_4.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 O</p><br>
+                                  <span>식재료에 맞춰 변신하는 맞춤보관실</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_5.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 C</p><br>
+                                  <span>더 넓은 세상을 담는다</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_6.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 9</p><br>
+                                  <span>새롭게 선보이는 트렌디한 디자인</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_7.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 W</p><br>
+                                  <span>주방 인테리어에 품격을 더하다</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_8.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 Q</p><br>
+                                  <span>유행을 타지 않는 견고한 메탈 디자인</span></div>
+                                  <div class="swiper-slide">
+                                  <img src="../images/Product/KA/ka3_9.png" alt="KA_1">
+                                  <p>ELECTRO 패밀리허브 N</p><br>
+                                  <span>메탈 셰프팬트리 저온냉장</span></div>
+                                </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+</div>
+                  <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_1.png" alt="KA_1">
+                  <p>ELECTRO BigScale 1</p><br>
+                  <span>BLDC Fan Motor의 조용한 에너지 절감</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_2.png" alt="KA_1">
+                  <p>ELECTRO BigScale 2</p><br>
+                  <span>필요한 곳만 열어 냉기를 최소화하는 4Door</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_3.png" alt="KA_1">
+                  <p>ELECTRO BigScale 3</p><br>
+                  <span>보다 강력한 냉기! 직냉식 냉장</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_4.png" alt="KA_1">
+                  <p>ELECTRO BigScale 4</p><br>
+                  <span>온도를 일정하게 유지하는 독보적 기술</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_5.png" alt="KA_1">
+                  <p>ELECTRO BigScale 5</p><br>
+                  <span>메탈로 냉기를 잡아 신섬함이 오래</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_6.png" alt="KA_1">
+                  <p>ELECTRO BigScale 6</p><br>
+                  <span>기본에 충실한 디자인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/ka4_7.png" alt="KA_1">
+                  <p>ELECTRO BigScale 7</p><br>
+                  <span>식재료 맞춤형 수납냉장고</span></div>
+       
+                 
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div> 
+    </div>
+                <div class="Product_KA1" id="KA_2">
+                <h2>BESPOKE 김치냉장고</h2>
+                <p>오랫동안 신선하게!<p>
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_1.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE K</p><br>
+                  <span>가구를 맞추듯 가전을 맞추다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_2.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE KS</p><br>
+                  <span>메탈쿨링은로 한겨울 김치맛 그대로</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_3.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE KA</p><br>
+                  <span>슬림한 디자인에 맞춤보관까지</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_4.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE KN</p><br>
+                  <span>김치맛은 기본, 냉동모드로 실속있게</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_5.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE KK</p><br>
+                  <span>활용성을 높여주는 냉동</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_6.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE K9</p><br>
+                  <span>아삭한 김치맛 메탈쿨링</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_7.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE KW</p><br>
+                  <span>넉넉한 수납, 와이드 상칸</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb1_8.png" alt="KA_1">
+                  <p>ELECTRO BESPOKE KQ</p><br>
+                  <span>컬러풀하면서 강력한</span></div>
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+                  <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb2_1.png" alt="KA_1">
+                  <p>ELECTRO 김치플러스</p><br>
+                  <span>다양한 김치를 맞춤보관</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb2_2.png" alt="KA_1">
+                  <p>ELECTRO 김치플러스 A</p><br>
+                  <span>식재료 초정온 맞춤보관</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb2_3.png" alt="KA_1">
+                  <p>ELECTRO 김치플러스 B</p><br>
+                  <span>메탈만이 만들 수 있는 땅속 김치맛</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb2_4.png" alt="KA_1">
+                  <p>ELECTRO 김치플러스 O</p><br>
+                  <span>으뜸효율가전 환급대상 모델</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb2_5.png" alt="KA_1">
+                  <p>ELECTRO 김치플러스 C</p><br>
+                  <span>빅도어가드로 수납 공간을 더 알차게</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kb2_6.png" alt="KA_1">
+                  <p>ELECTRO 김치플러스 9</p><br>
+                  <span>김치 저장에 최적화된 디자인</span></div>
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+   </div>        
+    </div>
+     <div class="aos-item Title1" id="KA_3">
+                <h2 class="aos-item__inner" data-aos="fade-right"><a href="./Product1.html">빌트인 가전</a></h2>
+                <p class="aos-item__inner Pro_Title1" data-aos="fade-right">
+                프리미엄 주방의 완성</p><br>
+                <p class="aos-item__inner pro_subTxt1" data-aos="fade-right">
+                  주방, 보여주고 싶은 작품이 되다.<br>
+                   스테인리스 메탈의 고급스러운 외관과 주방 인테리어에 딱 맞는<br>
+                   키친 핏 디자인으로 프리미엄 한 주방 공간을 완성합니다.</p>                                  
+    </div>
+     <div class="Product_KA1">
+                <h2>셰프컬렌션 빌트인</h2>
+                <p>프리미엄 주방의 완성!<p>
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_1.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 인덕션</p><br>
+                  <span>정교한 화력조절과 마그네틱 다이얼</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_2.png" alt="KA_1">
+                  <p>ELECTRO 프리미엄 A</p><br>
+                  <span>독일 쇼트 세란 글라스와 EGO 발열체</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_3.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 오븐</p><br>
+                  <span>고메 베이퍼 기술 채용</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_4.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 식기세척기</p><br>
+                  <span>워터월 세척 방식으로 사각지역 최소화</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_5.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 세척기</p><br>
+                  <span>폭포수 같은 물장벽</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_7.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 2구</p><br>
+                  <span>하이브리드 빌트인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_8.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 1구</p><br>
+                  <span>열효율이 뛰어나 조리 속도가 더욱 빠르게</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_9.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 냉장고</p><br>
+                  <span>냉장고와 정수기를 한번에</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_10.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 4Door</p><br>
+                  <span>최대 용량에 최소 공간</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_11.png" alt="KA_1">
+                  <p>ELECTRO 셰프컬렌션 Basic</p><br>
+                  <span>기본에 충실한 성능과 디자인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/KA/kc1_12.png" alt="KA_1">
+                  <p>ELECTRO 빌트인 세탁기</p><br>
+                  <span>세균 걱정 덜어주는 살균표백 효과</span></div>
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+   </div>
+      
+      
+       <!--footer-->
+        <footer></footer>
+    </div>
+    <style>
+        
+    </style>
+
+ <script src="../js/swiper.min.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+        
+
+    </script>
+<nav></nav>
+    </body>
+</html>

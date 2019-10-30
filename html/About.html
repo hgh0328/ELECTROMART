@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../js/aos.js"></script>
+
+    <style>
+        /*defult setting*/
+        em {
+            font-style: normal;
+        }
+
+        #wrap {
+
+            max-height: 1080px;
+            max-width: 100%;
+
+        }
+
+        body {
+            width: 100%;
+            background: #eee;
+            
+        }
+
+        header {
+            z-index: 9999;
+            height: auto;
+            background: #000;
+            color: #000;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-trank {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: steelblue;
+        }
+
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            width: 10px;
+            height: 10px;
+            background: steelblue;
+        }
+
+    </style>
+    <style>
+        /*About Title*/
+        .Title {
+            background-image: url(../images/About/nav_bg.jpeg);
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 600px;
+            background-position: center;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .About_nav {
+            width: 15%;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+        }
+
+        .About_nav li {
+            float: left;
+            width: 20%;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1vw;
+        }
+
+        .About_nav:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .Title h2 {
+            position: relative;
+            top: 50%;
+            font-size: 40px;;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+        }
+
+        .Title .fa-chevron-right {
+            color: #9d9d9d;
+            font-size: 0.5vw;
+            line-height: 1vw;
+        }
+
+
+        /*About c1*/
+        .About_c1_txt {
+            width: 80%;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            line-height: 2vw
+        }
+
+        .About_c2 {
+            position: relative;
+            width: 82%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+
+        .About_c1_txt div {
+            float: left;
+            width: 50%;
+            position: relative;
+        }
+
+        .About_c1_txt:after {
+            content: '';
+            display: block;
+            clear: both;
+        }     
+
+        .About_c1_txt .c1_txt_l {
+            text-align: center;
+            padding-top: 10%;
+            padding-bottom: 5%;
+        }
+
+        .About_c1_txt .c1_txt_r h4 {
+            font-size: 36px;
+            color: gold;
+            border: 1px solid steelblue;
+            display: inline;
+            line-height: 4vw;
+            background: steelblue;
+        }
+
+        .About_c1_txt .c1_txt_r .c1_txt_rs2 {
+            font-size: 18px;
+            line-height: 2vw;
+            font-weight: bold;
+            letter-spacing: 0.1vw
+        }
+        .About_c1_list{width: 100%; margin: 0 auto; position: relative; padding-bottom: 25%;}
+        .About_c1_list li{width: 18%; position: absolute; height: 300px;}
+        
+        /*About c1__hover*/
+        .c1_list_img1{position: absolute; top: 0; left: 50%; z-index: 10; box-shadow: -5px 0px 10px #3e3e3e; transition: 0.5s;}
+        .c1_list_img1:hover{z-index: 11; transition: 0.5s; left: 49%; top: -30px;}
+        .c1_list_img2{position: absolute; top: 0; left: 117.5%; z-index: 10; box-shadow: -5px 0px 10px #3e3e3e; transition: 0.5s;}
+        .c1_list_img2:hover{z-index: 11; transition: 0.5s; left: 116.5%; top: -30px;}
+        .c1_list_img3{position: absolute; top: 0; left: 185%; z-index: 10; box-shadow: -5px 0px 10px #3e3e3e; transition: 0.5s;}
+        .c1_list_img3:hover{z-index: 11; transition: 0.5s; left: 184%; top: -30px;}
+        .c1_list_img4{position: absolute; top: 0; left: 252.5%; z-index: 10; box-shadow: -5px 0px 10px #3e3e3e; transition: 0.5s;}
+        .c1_list_img4:hover{z-index: 11; transition: 0.5s; left: 251.5%; top: -30px;}
+        .c1_list_img5{position: absolute; top: 0; left: 320%; z-index: 10; box-shadow: -5px 0px 10px #3e3e3e; transition: 0.5s;}
+        .c1_list_img5:hover{z-index: 11; transition: 0.5s; left: 319%; top: -30px;}
+        .c1_list_img6{position: absolute; top: 0; left: 406%; z-index: 10; box-shadow: -5px 0px 10px #3e3e3e; transition: 0.5s;}
+        .c1_list_img6:hover{z-index: 11; transition: 0.5s; left: 405%; top: -30px;}
+        
+        .c1_list_img1.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
+        .c1_list_img2.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
+        .c1_list_img3.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
+        .c1_list_img4.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
+        .c1_list_img5.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
+        .c1_list_img6.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
+        
+        .img_on_bg{position: absolute; width: 100%; height: 233%; background: #000; z-index: 11; top: 59.2%; left: 0; opacity: 0.8; padding-bottom: 100%; cursor: default; filter: blur(15px); transition: 0.5s;}
+        
+        /*About c2*/
+        .About_c2_list{width: 100%; background: #eee; overflow: hidden; margin-bottom: 10%;}
+        .About_c2_list li{float: left; width: 50%; height: 310px; }
+        .About_c2_list:after{content: ''; display: block; clear: both;}
+        .About_c2_list p{line-height: 1.5vw}
+
+        .About_c2_list li:nth-child(2) p{text-align: left; color: #fff; padding-left: 5%;}
+        .About_c2_list li:nth-child(2) {background: #197aff;}
+        .About_c2_list li:nth-child(3) p{text-align: right;  color: #fff;  padding-right: 5%;}
+        .About_c2_list li:nth-child(3) {background: #1562cc;}
+        .About_c2_list li:nth-child(6) p{text-align: left;  color: #fff;  padding-left: 5%;}
+        .About_c2_list li:nth-child(6) {background: #325380;}
+        .About_c2_list li:nth-child(7) p{text-align: right;  color: #fff;   padding-right: 5%;}
+        .About_c2_list li:nth-child(7) {background: #0d3d7f;}
+        .About_c2_list .c2_item_title{font-size: 20px;  padding-top: 10%; line-height: 3vw;  font-weight: bold;}
+        
+        /*회사소개 호버*/
+        .About_c2_list_hover {
+          background: transparent;
+          font-size: 1.2vw;
+          color: #fff;
+          border-radius: 0;
+          padding: ;
+          transition: all 0.7s ease-out;
+          background: linear-gradient(-270deg, rgba(0,120,193,0.8), rgba(253,190,43,0.8), rgba(253,210,43,0), rgba(253,210,43,0));
+          background-position: 1% 50%;
+          background-size: 300% 300%;
+          border: 1px solid rgba(120,193,0,0.3);
+            
+        }
+
+        .About_c2_list_hover:hover {
+          border: 1px solid rgba(223,190,106,0);
+          color: #0078c1;
+          background-position: 99% 50%;
+          border-bottom: 7px solid #0078c1;
+            }
+        
+
+    </style>
+    <style>
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+        .Title {height: 400px;}
+        .About_nav {width: 25%;}
+        .About_nav li {font-size: 2vw; line-height: 2vw;}
+        .Title h2 {font-size: 4.5vw; padding-left: 3%;}
+        .Title .fa-chevron-right {font-size: 1.5vw; line-height: 2vw;}
+            .About_c1_txt .c1_txt_r{padding-left: 10%;}
+            .About_c1_txt .c1_txt_r h4{font-size: 3vw;}
+            .About_c2_list li:nth-child(2) p{text-align: left;}
+            .About_c2_list li:nth-child(3) p{text-align: left;}
+            .About_c2_list li:nth-child(6) p{text-align: left;}
+            .About_c2_list li:nth-child(7) p{text-align: left;}
+
+            .img_on_bg{top: 0%; height: 248%;}
+            .About_c2_list .c2_item_title{font-size: 3vw;  padding-top: 2%; line-height: 2vw;  font-weight: bold;}            
+            .About_c2_list p{line-height: 2vw; padding: 3%; font-size: 1.5vw;}
+            
+            .c1_list_img1.on{transform: scale(2.5); top: 10%;}
+            .c1_list_img2.on{transform: scale(2.5); top: 10%;}
+            .c1_list_img3.on{transform: scale(2.5); top: 10%;}
+            .c1_list_img4.on{transform: scale(2.5); top: 10%;}
+            .c1_list_img5.on{transform: scale(2.5); top: 10%;}
+            .c1_list_img6.on{transform: scale(2.5); top: 10%;}
+        }
+
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            .Title {height: 200px;}
+            .About_nav {width: 25%;}
+            .About_nav li {font-size: 2vw; line-height: 2vw;}
+            .Title h2 {font-size: 4.5vw; padding-left: 3%;}
+            .Title .fa-chevron-right {font-size: 1.5vw; line-height: 2vw;}
+            .About_c1_txt{width: 100%;}
+            .About_c1_txt .c1_txt_r{padding-left: 2%; min-width: 200px;}
+            .About_c1_txt .c1_txt_r h4{font-size: 3vw;}
+            .About_c1_txt .c1_txt_r .c1_txt_rs2{font-size: 1vw; line-height: normal;}
+            
+            
+            
+            .About_c2_list li:nth-child(2) p{text-align: left; padding-bottom: 3%;}
+            .About_c2_list li:nth-child(3) p{text-align: left; padding-bottom: 3%;}
+            .About_c2_list li:nth-child(6) p{text-align: left; padding-bottom: 3%;}
+            .About_c2_list li:nth-child(7) p{text-align: left; padding-bottom: 3%;}
+
+             .About_c2_list li{width: 100%; height: auto;}
+            .About_c2_hide{display: none; width: 0; height: 0;}
+            .About_c2_list .c2_item_title{font-size: 4vw;  padding-top: 10%; line-height: 2vw;  font-weight: bold;}            
+            .About_c2_list p{line-height: 3.5vw; padding: 3%; font-size: 2.5vw;}
+            
+            .img_on_bg{top: 0%; height: 144%;}
+            
+            .c1_list_img1.on{transform: scale(5); top: 10%;}
+            .c1_list_img2.on{transform: scale(5); top: 10%;}
+            .c1_list_img3.on{transform: scale(5); top: 10%;}
+            .c1_list_img4.on{transform: scale(5); top: 10%;}
+            .c1_list_img5.on{transform: scale(5); top: 10%;}
+            .c1_list_img6.on{transform: scale(5); top: 10%;}
+
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+            
+            $(".img_on_bg").fadeOut();
+            $(".c1_list_img1").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeToggle(500);
+                $(".c1_list_img1").toggleClass("on");
+                $(".c1_list_img2").removeClass("on");
+                $(".c1_list_img3").removeClass("on");
+                $(".c1_list_img4").removeClass("on");
+                $(".c1_list_img5").removeClass("on");
+                $(".c1_list_img6").removeClass("on");
+            });
+            $(".c1_list_img2").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeToggle(500);
+                $(".c1_list_img2").toggleClass("on");
+                $(".c1_list_img1").removeClass("on");
+                $(".c1_list_img3").removeClass("on");
+                $(".c1_list_img4").removeClass("on");
+                $(".c1_list_img5").removeClass("on");
+                $(".c1_list_img6").removeClass("on");
+            });
+            $(".c1_list_img3").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeToggle(500);
+                $(".c1_list_img3").toggleClass("on");
+                $(".c1_list_img2").removeClass("on");
+                $(".c1_list_img1").removeClass("on");
+                $(".c1_list_img4").removeClass("on");
+                $(".c1_list_img5").removeClass("on");
+                $(".c1_list_img6").removeClass("on");
+            });
+            $(".c1_list_img4").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeToggle(500);
+                $(".c1_list_img4").toggleClass("on");
+                $(".c1_list_img2").removeClass("on");
+                $(".c1_list_img3").removeClass("on");
+                $(".c1_list_img1").removeClass("on");
+                $(".c1_list_img5").removeClass("on");
+                $(".c1_list_img6").removeClass("on");
+            });
+            $(".c1_list_img5").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeToggle(500);
+                $(".c1_list_img5").toggleClass("on");
+                $(".c1_list_img2").removeClass("on");
+                $(".c1_list_img3").removeClass("on");
+                $(".c1_list_img4").removeClass("on");
+                $(".c1_list_img1").removeClass("on");
+                $(".c1_list_img6").removeClass("on");
+            });
+            $(".c1_list_img6").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeToggle(500);
+                $(".c1_list_img6").toggleClass("on");
+                $(".c1_list_img2").removeClass("on");
+                $(".c1_list_img3").removeClass("on");
+                $(".c1_list_img4").removeClass("on");
+                $(".c1_list_img5").removeClass("on");
+                $(".c1_list_img1").removeClass("on");
+            });
+            $(".img_on_bg").click(function(e){
+                e.preventDefault();
+                $(".img_on_bg").fadeOut(500);
+                $(".c1_list_img1").removeClass("on");
+                $(".c1_list_img2").removeClass("on");
+                $(".c1_list_img3").removeClass("on");
+                $(".c1_list_img4").removeClass("on");
+                $(".c1_list_img5").removeClass("on");
+                $(".c1_list_img6").removeClass("on");                
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div id="wrap">
+        <header></header>
+
+        <div id="transcroller-body" class="aos-all">
+            <div class="aos-item Title" data-aos="fade-in">
+                <ul class="About_nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./About.html">Company</a></li>
+                </ul>
+                <h2 class="aos-item__inner"><a href="./About.html">COMPANY</a></h2>
+            </div>
+            <div class="aos-item About_c1">
+              <div class="About_c1_txt">
+                    <div class="c1_txt_l">
+                        <img src="../images/header/logo_HOVER.png" alt="회사로고">
+                    </div>
+                    <div class="c1_txt_r">
+                       
+                        <h4>어른들의 놀이터!</h4>
+                        <p class="c1_txt_rs2">국내 최고 수준의 체험 테마형<br>
+                            가전전문점 일렉트로 마트(ELECTRO MART)<br>
+                            드론, 스마트기기 체험존부터 프리미엄 상품,<br>
+                            애플샵까지 기존 가전매장에서 느낄 수 없었던<br>
+                            즐거움과 색다른 경험을 드립니다.</p>
+                    </div>
+                </div>
+               <ul class="About_c1_list">
+                   <li><img src="../images/About/A_c1_img1.jpg" alt="a_c1_img" width="100%" class="c1_list_img1"></li>
+                   <li><img src="../images/About/A_c1_img2.jpg" alt="a_c1_img" width="100%" class="c1_list_img2"></li>
+                   <li><img src="../images/About/A_c1_img3.jpg" alt="a_c1_img" width="100%" class="c1_list_img3"></li>
+                   <li><img src="../images/About/A_c1_img4.jpg" alt="a_c1_img" width="100%" class="c1_list_img4"></li>
+                   <li><img src="../images/About/A_c1_img5.jpg" alt="a_c1_img" width="100%" class="c1_list_img5"></li>
+                   <li><img src="../images/About/A_c1_img6.jpg" alt="a_c1_img" width="100%" class="c1_list_img6"></li>
+               </ul>
+               <div class="img_on_bg"></div>                
+            </div>
+            <div class="aos-item About_c2">
+                
+                <ul class="aos-item__inner About_c2_list">
+                    <li data-aos="fade-left" class="About_c2_item1">
+                        <img src="../images/About/A_Company/com_1.png" alt="비전사진" width="100%" height="100%" class="About_c2_hide">
+                    </li>
+                    <li data-aos="fade-left">
+                        <p class="c2_item_title">비전</p>
+                        <p>세계적으로 대두되고 있는 도전과제 해결을위한 일렉트로마트의 혁신적인 솔루션을 만나보세요.</p>
+                        <p>일렉트로마트의 상품은 건강과 안전, 사회투자, 이해관계자 참여 및 공급업체의 비전을 포함하고 있습니다.</p>
+                    </li>
+                    <li data-aos="fade-right" class="About_c2_item2">
+                        <p class="c2_item_title">기업정보</p>
+                        <p>일렉트로마트는 금융, 사회, 환경적 성과를 포함하는 자사 통합 연례 보고서의 일부로서</p>
+                        <p>지속가능 경영 활동에 관한 데이터를 발표했습니다.</p>
+                    </li>
+                    <li data-aos="fade-right">
+                        <img src="../images/About/A_Company/com_2.png" alt="기업정보사진" width="100%" height="100%" class="About_c2_hide">
+                    </li>
+                    <li data-aos="fade-left" class="About_c2_item3">
+                        <img src="../images/About/A_Company/com_3.png" alt="사업정보사진" width="100%" height="100%" class="About_c2_hide">
+                    </li>
+                    <li data-aos="fade-left">
+                        <p class="c2_item_title">사업정보</p>
+                        <p>일렉트로마트는 그린 테크놀로지 개발에 투자하고, 고객들의 친환경 제품 선택을 가능하게 함으로써<br></p>
+                        <p>보다 나은 세계의 발전에 기여합니다. 또한 안정적인 사업성을 위해 작업환경에 미치는 영향을 최소화하도록 노력합니다.</p>
+                    </li>
+                    <li data-aos="fade-right" class="About_c2_item4">
+                        <p class="c2_item_title">지속가능경영</p>
+                        <p>일렉트로마트는 자사의 관리 시스템과 지속가능성 보고를 강화하기 위해 외부 지표와 기준 정보를 사용<br></p>
+                        <p>지속가능성을 위한 노력으로수년간 높은 평가를 받아 왔으며, 이를 자랑스럽게 생각합니다.</p>
+                    </li>
+                    <li data-aos="fade-right">
+                        <img src="../images/About/A_Company/com_4.png" alt="지속가능경영사진" width="100%" height="100%" class="About_c2_hide">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <!--footer-->
+        <footer></footer>
+    </div>
+    
+
+
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+        $(function() {});
+
+    </script>
+
+
+</body>
+
+</html>

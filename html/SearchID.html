@@ -1,0 +1,90 @@
+<?php   include "db.php"; ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>고오오~급진 로그인&amp;회원가입</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.vide.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        body, html{width: 100%; height: 100%; position: relative;}
+        header{z-index: 9999}
+        
+        
+        #wrap{width: 100%; overflow: hidden; color: #f9f9f9; font-family: 'Do Hyeon', sans-serif;}
+        .R_box{ position: absolute;  background: rgba(255,255,255,0.8); text-align: center; width: 60%; margin: 0 auto;  top: 32%;left: 20%; height: 450px;}
+        .R_box form{margin-top: 50px;}
+        .R_box h1{font-size: 28px; background: #0078c1; color: #f8f7f7; line-height: 60px; letter-spacing: 4px;}
+        fieldset{border: 5px solid rgba(0,0,0,0.2); width: 90%; margin: 0 auto; border-radius: 5px; background: rgba(0,0,0,0.2); height: auto;}
+        legend{color: #3e3e3e;}
+    
+        .T{font-size: 24px; width: 38%; text-align: right; color: #1e1e1e; line-height: 70px; padding-right: 5%;}
+        .import{color: #0078c1; font-size: 1vw; font-weight: normal; letter-spacing: 0.1px; width: 30%; padding-right: 70px;}
+        input[type ="text"]{height: 25px; font-size: 16px; text-indent: 0.5vw; width: 102%;}
+
+        input[type ="submit"]{font-size: 14px; margin: 10px; padding: 10px; border:1px #3399dd solid; background-color:#0078c1; cursor: pointer; transition:all 1.5s; font-weight: bold; color: #fff; border-radius: 5px; width: 250px; margin-top: 5%; margin-bottom: 5%;}
+        input[type ="submit"]:hover{color:#0078c1; box-shadow:-200px 0 0 0 rgba(255,255,255,255.5) inset;}
+        .return{font-size: 16px; margin: 10px; padding: 12px 10px 10px 10px; border:1px #3399dd solid; background-color:rgba(0,120,193,0.5); cursor: pointer; transition:all 1.5s; font-weight: normal; color: #fff; border-radius: 5px; text-decoration: none;}
+        .return:hover{color:#0078c1; box-shadow:100px 0 0 0 rgba(255,255,255,255.5) inset;}
+        
+        .dott{font-size: 1vw; text-align: center;}
+        .search_tit{font-size: 28px; line-height: 50px;}
+        .dott{font-size: 16px; text-align: right; margin-left: 5px;}
+        
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+            .R_box{width: 80%; left: 10%;}
+            
+        }
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            .R_box{width: 100%; left: 0;}
+            .Textbox1{margin-right: 50px;}
+       
+        }
+        
+
+
+    </style>
+    
+    <script>
+    $(function() {
+            $("header").load("header.html");
+    });
+    </script>
+
+</head>
+
+<body data-vide-bg="../images/bg.mp4">
+  <header></header>
+   
+    <div id="wrap">
+    <div class="R_box">
+		<h1>Find ID</h1>
+       <form method="get" action="SearchID_Result.html">
+			<fieldset>
+                <legend>입력사항</legend>
+                <p class="search_tit">아이디 찾기</p>
+					<table align="center">
+						<tr>
+							<td class="T">이름</td>
+							<td><input type="text" size="30" name="name" placeholder="이름"></td>
+							<td class="import">* 필수입력사항</td>
+						</tr>
+					</table>
+
+                <a href="Login.html" class="return">뒤로가기</a><input type="submit" value="아이디찾기" />	
+           </fieldset>
+        </form>
+        </div>
+    </div>
+    
+    
+
+</body>
+
+</html>

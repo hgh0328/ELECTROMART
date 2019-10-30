@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ELECTRO★MART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/aos.js"></script>
+
+    <style>
+        /*defult setting*/
+        em {
+            font-style: normal;
+        }
+
+        #wrap {
+
+            max-height: 1080px;
+            max-width: 100%;
+
+        }
+
+        body {
+            width: 100%;
+            background: #eee;
+            
+        }
+
+        header {
+            z-index: 9999;
+            height: auto;
+            background: #000;
+            color: #000;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-trank {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0078c1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: steelblue;
+        }
+
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            width: 10px;
+            height: 10px;
+            background: steelblue;
+        }
+
+    </style>
+    <style>
+        /*Product_Title*/
+        .Title {
+            background-image: url(../images/Product/Pro_bg.png);
+            background-size: cover;
+            width: 100%;
+            height: 1080px;
+            background-position: top;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-attachment: fixed;
+             transition: 0.5s;
+        }
+
+        .Product_nav {
+            width: 25%;
+            margin: 0 auto;
+            position: relative;
+            top: 33%;
+             transition: 0.5s;
+        }
+
+        .Product_nav li {
+            float: left;
+            width: 20%;
+            color: #fff;
+            font-size: 1vw;
+            line-height: 1vw;
+             transition: 0.5s;
+        }
+
+        .Product_nav:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .Title h2 {
+            
+            position: relative;
+            top: 33%;
+            font-size: 3.5vw;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+             transition: 0.5s;
+        }
+        .Pro_Title {
+            font-weight: bold;
+            position: relative;
+            top: 53%;
+            font-size: 1.5vw;
+            left: 0%;
+            width: 48.1%;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+             transition: 0.5s;
+        }
+        .pro_subTxt{
+            
+            position: relative;
+            top: 53%;
+            text-align: left;
+            left: 10%;
+            width: 70%;
+            font-size: 1.2vw;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+             transition: 0.5s;
+        }
+
+        .Title .fa-chevron-right {
+            color: #9d9d9d;
+            font-size: 1vw;
+            line-height: 1vw;
+        }
+        .Title .fa-angle-double-down{
+            position: absolute;
+            font-size: 5vw;
+            color: #fff;
+            top: 89%;
+            left: 48.4%;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .Title .fa-angle-double-down:hover{animation: none; color: steelblue; bottom: 0; transition: 0.5s;}
+        .slide-bottom{-webkit-animation:slide-bottom 1s infinite alternate forwards;animation:slide-bottom 1s infinite alternate forwards}
+        @-webkit-keyframes slide-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(30px);transform:translateY(30px)}}@keyframes slide-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(30px);transform:translateY(30px)}}
+        
+        /*Product_moblie*/
+        .Product_mobile{font-family: 'Roboto', sans-serif; position: relative; width: 100%; margin: 0 auto; text-align: center; margin-bottom: 4%;}
+        .Product_mobile>h2{margin-top: 3%; font-size: 2vw;}
+        .Product_mobile>p{margin-bottom: 3%; font-size: 1.3vw; line-height: 3vw;}
+        .Product_mobile .swiper-container{width: 80%; margin: 0 auto;}
+        .swiper-slide>p{font-size: 1.1vw; font-weight: bold; line-height: 0;}
+.swiper-slide>span{font-size: 0.7vw;}
+        /*Product_DeskTop*/
+        .Product_DeskTop {
+            
+            background-image: url(../images/Product/Pro_bg1.png);
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+            background-position: top;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-attachment: fixed;
+        }
+        .Product_DeskTop h2 {            
+            position: relative;
+        
+            top: 25%;
+            font-size: 2.5vw;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            letter-spacing: 0.2vw;
+            line-height: 5vw
+        }
+        .Pro_Desk_Title {
+            font-weight: bold;
+            position: relative;
+            top: 35%;
+            font-size: 1.2vw;
+            left: 0%;
+            width: 25%;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+        }
+        .Pro_Desk_subTxt{            
+            position: relative;
+            top: 31%;
+            text-align: left;
+            left: 3.2%;
+            width: 70%;
+            font-size: 1vw;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+            
+        }
+        .Product_DeskTop_list{font-family: 'Roboto', sans-serif; position: relative; width: 100%; margin: 0 auto; text-align: center;}
+        .Product_DeskTop_content .swiper-container{width: 80%; margin: 0 auto; margin-top: 4%; margin-bottom: 5%;}
+        
+        
+        /*Product_LapTop*/
+        .Product_LapTop {
+            
+            background-image: url(../images/Product/Pro_bg2.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+            background-position: bottom;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-attachment: fixed;
+        }
+        .Product_LapTop h2 {            
+            position: relative;
+        
+            top: 25%;
+            font-size: 2.5vw;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            letter-spacing: 0.3vw;
+            line-height: 5vw
+        }
+        .Pro_Desk_Title {
+            font-weight: bold;
+            position: relative;
+            top: 35%;
+            font-size: 1.2vw;
+            left: 1%;
+            width: 25%;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 1%;
+        }
+        .Pro_Desk_subTxt{            
+            position: relative;
+            top: 31%;
+            text-align: left;
+            left: 3.2%;
+            width: 70%;
+            font-size: 1vw;
+            color: #fff;
+            letter-spacing: 0.2vw;
+            padding-left: 2%;
+            
+        }
+        .Product_LapTop_list{font-family: 'Roboto', sans-serif; position: relative; width: 100%; margin: 0 auto; text-align: center;}
+        .Product_LapTop_content .swiper-container{ position: relative; width: 80%; margin: 0 auto; margin-top: 4%; margin-bottom: 5%;}
+        
+        
+
+    </style>
+    <style>
+        @media screen and (max-width:1350px) and (min-width: 1001px) {
+        .Title{height: 500px; transition: 0.5s;}
+        .Product_nav{top: 35%; transition: 0.5s;}
+        .Title h2 {top: 35%; transition: 0.5s;}
+        .Pro_Title{font-size: 2vw;left: 3%; transition: 0.5s;}
+        .pro_subTxt{font-size: 1.3vw; transition: 0.5s;}
+        }
+
+        @media screen and (max-width:1000px) and (min-width:300px) {
+            .Title{height: 400px; transition: 0.5s;}
+        .Product_nav{top: 40%; transition: 0.5s; width:30%;}
+        .Title h2 {top: 42%; transition: 0.5s; margin-left: 2.5%;}
+        .Pro_Title{font-size: 2.2vw;left: 5%; transition: 0.5s;}
+        .pro_subTxt{font-size: 2.0vw; transition: 0.5s; white-space: nowrap;}
+            .Product_DeskTop{height: 350px;}
+            .Product_DeskTop h2{font-size: 8vw; line-height: 10vw;}
+            .Pro_Desk_Title{font-size: 3vw; width: 45%;}
+            .Pro_Desk_subTxt{font-size: 2vw; white-space: nowrap;}
+            .Product_LapTop{height: 350px;}
+            .Product_LapTop h2{font-size: 8vw; line-height: 10vw;}
+            .Pro_Desk_Title{font-size: 3vw; width: 45%;}
+            .Pro_Desk_subTxt{font-size: 2vw; white-space: nowrap;}
+            .swiper-button-next{display: none;}
+        .swiper-button-prev{display: none;}
+            
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+            $("nav").load("Product_nav.html");
+            
+            $(".slide-bottom").click(function(){
+                var move = $(".Product_mobile").offset();
+                $('html, body').animate({scrollTop : move.top},1000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div id="wrap">
+        <header></header>
+        <div id="transcroller-body" class="aos-all">
+            <div class="aos-item Title">
+                <ul class="Product_nav" data-aos="fade-right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./Product1.html">Product</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+                    <li><a href="./Product1.html">Moblie&amp;PC</a></li>
+                </ul>
+                <h2 class="aos-item__inner" data-aos="fade-right"><a href="./Product1.html">Moblie &amp; Desktop</a></h2>
+                <p class="aos-item__inner Pro_Title" data-aos="fade-right">
+                새로운 차원의 세계를 만나보세요.</p><br>
+                <p class="aos-item__inner pro_subTxt" data-aos="fade-right">
+                  ELECTRO Note10의 진화된 스마트 E펜은 스마트폰에 손대지 않고도<br>
+                   많은 것을 가능하게 해줍니다. 한손에 들어오는 사이즈와<br>
+                   강력한 파워로 하루의 모든 순간을 함께하세요.</p>
+                   <i class="fa fa-angle-double-down slide-bottom"></i>
+            </div>
+            <div class="Product_mobile" id="moblie">
+                <h2>스마트폰을 선택하세요.</h2>
+                <p>5G로 만나는 새로운 세계!<p>
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie1.png" alt="phone1">
+                  <p>ELECTRO NOTE</p><br>
+                  <span>진화된 E펜으로 새로운 가능성을 열다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie2.png" alt="phone1">
+                  <p>ELECTRO S</p><br>
+                  <span>새로운 시대의 혁신</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie3.png" alt="phone1">
+                  <p>ELECTRO A</p><br>
+                  <span>새로움에 새로움을 더하다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie4.png" alt="phone1">
+                  <p>ELECTRO B</p><br>
+                  <span>매 순간 함께하는 즐거움</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie5.png" alt="phone1">
+                  <p>ELECTRO O</p><br>
+                  <span>새로운 화면으로 세상을 보다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie6.png" alt="phone1">
+                  <p>ELECTRO C</p><br>
+                  <span>더 넓은 세상을 담는다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie7.png" alt="phone1">
+                  <p>ELECTRO 9</p><br>
+                  <span>새롭게 선보이는 트렌디한 디자인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie8.png" alt="phone1">
+                  <p>ELECTRO W</p><br>
+                  <span>진화된 E펜으로 새로운 가능성을 열다</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie9.png" alt="phone1">
+                  <p>ELECTRO Q</p><br>
+                  <span>더 넓어진 인피니티 디스플레이</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_moblie10.png" alt="phone1">
+                  <p>ELECTRO N</p><br>
+                  <span>눈에 보이는 그대로 담는 초광각 카메라</span></div>
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+    </div>
+     
+       <div class="aos-item Product_DeskTop" id="DeskTop">
+                <h2 class="aos-item__inner" data-aos="fade-right"><a href="./Product1.html">DESKTOP</a></h2>
+                <p class="aos-item__inner Pro_Desk_Title" data-aos="fade-right">
+                게이밍을 위한 최적의 PC.</p><br>
+                <p class="aos-item__inner Pro_Desk_subTxt" data-aos="fade-right">
+                  유니크한 디자인, 효율적인 쿨링 시스템,<br>
+                  강력한 성능을 모두 갖춘 게이밍에 최적화된<br>
+                  데스크탑 입니다.</p>
+      </div>
+      <div class="Product_DeskTop_content">
+      <div class="swiper-container Product_DeskTop_list">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_DeskTop1.png" alt="phone1">
+                  <p>ELECTRO Odyssey</p><br>
+                  <span>강력한 성능이 주는 즐거움</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_DeskTop2.png" alt="phone1">
+                  <p>ELECTRO AllInOne</p><br>
+                  <span>모든 공간과 조화를 이루는 디자인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_DeskTop3.png" alt="phone1">
+                  <p>ELECTRO Mini-EXTREM</p><br>
+                  <span>모던한 분위기의 프리미엄 Mini PC</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_DeskTop4.png" alt="phone1">
+                  <p>ELECTRO Slim White</p><br>
+                  <span>부드러운 화이트의 슬림 바디</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Pro_DeskTop5.png" alt="phone1">
+                  <p>ELECTRO Tower Black</p><br>
+                  <span>팝핑 도어로 손쉬운 업그레이드</span></div>
+                  
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+       <div class="aos-item Product_LapTop_content" id="LapTop">
+       <div class="aos-item Product_LapTop">
+                <h2 class="aos-item__inner" data-aos="fade-right"><a href="./Product1.html">LAPTOP</a></h2>
+                <p class="aos-item__inner Pro_Desk_Title" data-aos="fade-right">
+                세상을 바꿀 차세대 노트북.</p><br>
+                <p class="aos-item__inner Pro_Desk_subTxt" data-aos="fade-right">
+                  노트북의 한계를 뛰어넘는 새로운 모바일 PC,<br>
+                  한 번 충전으로 All day, 초경량으로 Always,<br>
+                  GIGA Wi-Fi로 더 빠른 노트북을 만나보세요.</p>
+      </div>
+          </div>
+      <div class="Product_LapTop_content">
+      <div class="swiper-container Product_LepTop_list">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Product_LebTop1.png" alt="phone1">
+                  <p>ELECTRO Odyssey N</p><br>
+                  <span>강력한 성능이 주는 즐거움</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Product_LebTop3.png" alt="phone1">
+                  <p>ELECTRO NotePen</p><br>
+                  <span>모든 공간과 조화를 이루는 디자인</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Product_LebTop2.png" alt="phone1">
+                  <p>ELECTRO EXTREM N</p><br>
+                  <span>모던한 분위기의 프리미엄 Mini PC</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Product_LebTop4.png" alt="phone1">
+                  <p>ELECTRO Alway9</p><br>
+                  <span>부드러운 화이트의 슬림 바디</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Product_LebTop5.png" alt="phone1">
+                  <p>ELECTRO Slim7</p><br>
+                  <span>팝핑 도어로 손쉬운 업그레이드</span></div>
+                  <div class="swiper-slide">
+                  <img src="../images/Product/Product_LebTop6.png" alt="phone1">
+                  <p>ELECTRO Basic</p><br>
+                  <span>팝핑 도어로 손쉬운 업그레이드</span></div>
+                  
+                </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+    </div>
+      </div>
+  
+  
+  
+  
+   
+    </div><!--footer-->
+        <footer></footer>
+    </div>
+    <style>
+        
+    </style>
+
+ <script src="../js/swiper.min.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+        
+
+    </script>
+<nav></nav>
+    </body>
+</html>
