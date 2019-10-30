@@ -5,7 +5,6 @@
     <title>main_header</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
 
     <style>
         .KR{font-family: 'Roboto', sans-serif; font-weight: bold;}
@@ -201,9 +200,10 @@
             
             $(".h_Submenu").hide();            
             
+            
             $(".h_mainmenu li").mouseenter(function(){
                 $("header>h1>a>img").css({"opacity":"0.5","transition":"0.5s"});
-                $("header>h1>a>img").attr({src:"images/header/logo_hover.png",alt:"hover_logo"});
+                $("header>h1>a>img").attr({src:"../images/header/logohover.png",alt:"hover_logo"});
                 $("header>h1>a>img").css({"opacity":"1","transition":"0.5s"});
                 $(".h_mainmenu>li").css({"color":"#251e1e","transition":"0.5s"});
                 $(".h_lnb select").css({"color":"#251e1e","transition":"0.5s","border-color":"#251e1e"});
@@ -220,7 +220,7 @@
                 $(".login_btn").css({"color":"#fff","transition":"0.5s",});
                 $(".fa-bars").css({"color":"#fff","transition":"0.5s",});
                 $(".fa-search").css({"color":"#fff","transition":"0.5s",});
-                 $("header>h1>a>img").attr({src:"images/header/logo.png",alt:"defult_logo"});
+                 $("header>h1>a>img").attr({src:"../images/header/logo.png",alt:"defult_logo"});
                 $(".h_Submenu").stop().slideUp(500);
                 $("header").css({"height":"120px","background":"none"});
                
@@ -228,11 +228,11 @@
             
             $(".moblie").mouseenter(function(){
                 $("header>h1>a>img").css({"opacity":"0.5","transition":"0.5s"});
-                $("header>h1>a>img").attr({src:"images/header/logo_hover.png",alt:"hover_logo"});
+                $("header>h1>a>img").attr({src:"../images/header/logohover.png",alt:"hover_logo"});
                 $("header>h1>a>img").css({"opacity":"1","transition":"0.5s"});   
             });
             $(".moblie").mouseleave(function(){
-                 $("header>h1>a>img").attr({src:"images/header/logo.png",alt:"defult_logo"});             
+                 $("header>h1>a>img").attr({src:"../images/header/logo.png",alt:"defult_logo"});             
             });
             $(".login_btn").mouseenter(function(){
                 $(".login_btn").css({"color":"#0078c1"});
@@ -249,31 +249,31 @@
 
 <body>
     <header>
-        <h1><a href="index.html"><img src="images/header/logo.png" alt="로고"></a></h1>
+        <h1><a href="index.html"><img src="../images/header/logo.png" alt="로고"></a></h1>
         <div class="h_gnb">
             <ul class="h_mainmenu">
-                <li class="main_title"><a href="html/About.html" class="main_title">ABOUT</a>
+                <li class="main_title"><a href="About.html" class="main_title">ABOUT</a>
                 <ul class="h_Submenu">
-                    <li><a href="html/About.html" class="main_title">Company</a></li>
+                    <li><a href="About.html" class="main_title">Company</a></li>
                 </ul></li>
-                <li class="main_title"><a href="html/Product1.html">PRODUCT</a>
+                <li class="main_title"><a href="Product1.html">PRODUCT</a>
                 <ul class="h_Submenu KR">
-                    <li><a href="html/Product1.html">Mobile &amp; Desktop</a></li>
-                    <li><a href="html/Product2.html">주방가전</a></li>
-                    <li><a href="html/Product3.html">생활가전</a></li>
+                    <li><a href="Product1.html">Mobile &amp; Desktop</a></li>
+                    <li><a href="Product2.html">주방가전</a></li>
+                    <li><a href="Product3.html">생활가전</a></li>
                 </ul></li>
-                <li class="main_title"><a href="html/Event.html" class="main_title">EVENT</a>
+                <li class="main_title"><a href="Event.html" class="main_title">EVENT</a>
                 <ul class="h_Submenu KR">
-                    <li><a href="html/Event.html#Bonus">구매혜택</a></li>
-                    <li><a href="html/Event.html#Entry">이벤트응모</a></li>
-                    <li><a href="html/Event.html#Enjoy">체험단응모</a></li>
+                    <li><a href="Event.html#Bonus">구매혜택</a></li>
+                    <li><a href="Event.html#Entry">이벤트응모</a></li>
+                    <li><a href="Event.html#Enjoy">체험단응모</a></li>
                 </ul></li>
-                <li class="main_title"><a href="html/Store.html" class="main_title">STORE</a>
+                <li class="main_title"><a href="Store.html" class="main_title">STORE</a>
                 <ul class="h_Submenu KR">
-                    <li><a href="html/Store.html#Store1">매장찾기</a></li>
-                    <li><a href="html/Store.html#Store2">상담예약</a></li>
-                    <li><a href="html/Store.html#Store3">서비스센터</a></li>
-                    <li><a href="html/Store.html#Store4">고객지원</a></li>
+                    <li><a href="Store.html#Store1">매장찾기</a></li>
+                    <li><a href="Store.html#Store2">상담예약</a></li>
+                    <li><a href="Store.html#Store3">서비스센터</a></li>
+                    <li><a href="Store.html#Store4">고객지원</a></li>
                 </ul></li>                
             </ul>            
         </div>
@@ -286,7 +286,7 @@
                         <option value="CA">CA</option>
                     </select>
                 </li>
-                <li><a href="html/Login.html" class="login_btn moblie_show moblie">Login</a></li>
+                <li><a href="Login.html" class="login_btn moblie_show moblie">Login</a></li>
                 <li><a href="#"><i class="fa fa-search searchBtn moblie_hide"></i></a></li>
             </ul>
         </div>
@@ -300,26 +300,26 @@
             <ul class="h_mobliemenu">
                 <li>ABOUT
                 <ul class="m_Submenu">
-                    <li><a href="html/About.html">Company</a></li>
+                    <li><a href="About.html">Company</a></li>
                 </ul></li>
                 <li>PRODUCT
                 <ul class="m_Submenu KR">
-                    <li><a href="html/Product1.html">Mobile &amp; Desktop</a></li>
-                    <li><a href="html/Product2.html">주방가전</a></li>
-                    <li><a href="html/Product3.html">생활가전</a></li>
+                    <li><a href="Product1.html">Mobile &amp; Desktop</a></li>
+                    <li><a href="Product2.html">주방가전</a></li>
+                    <li><a href="Product3.html">생활가전</a></li>
                 </ul></li>
                 <li>EVENT
                 <ul class="m_Submenu KR">
-                    <li><a href="html/Event.html#Bonus">구매혜택</a></li>
-                    <li><a href="html/Event.html#Entry">이벤트응모</a></li>
-                    <li><a href="html/Event.html#Enjoy">체험단응모</a></li>
+                    <li><a href="Event.html#Bonus">구매혜택</a></li>
+                    <li><a href="Event.html#Entry">이벤트응모</a></li>
+                    <li><a href="Event.html#Enjoy">체험단응모</a></li>
                 </ul></li>
                 <li>STORE
                 <ul class="m_Submenu KR">
-                    <li><a href="html/Store.html#Store1">매장찾기</a></li>
-                    <li><a href="html/Store.html#Store2">상담예약</a></li>
-                    <li><a href="html/Store.html#Store3">서비스센터</a></li>
-                    <li><a href="html/Store.html#Store4">고객지원</a></li>
+                    <li><a href="Store.html#Store1">매장찾기</a></li>
+                    <li><a href="Store.html#Store2">상담예약</a></li>
+                    <li><a href="Store.html#Store3">서비스센터</a></li>
+                    <li><a href="Store.html#Store4">고객지원</a></li>
                 </ul></li>                
             </ul>       
         </div>
