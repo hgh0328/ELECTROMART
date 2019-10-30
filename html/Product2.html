@@ -91,6 +91,7 @@
             overflow-x: hidden;
         }
         .Title1 {
+            filter: brightness(0.8);
             background-image: url(../images/Product/KA/kc_bg.png);
             background-size: cover;
             width: 100%;
@@ -100,6 +101,7 @@
             font-family: 'Roboto', sans-serif;
             background-attachment: fixed;
              transition: 0.5s;
+            
         }
 
         .Product_nav {
@@ -167,7 +169,7 @@
             font-size: 1vw;
             text-align: center;
             line-height: 3vw;
-            color: #251e1e;
+            color: #f9f9f9;
             letter-spacing: 0.2vw;
             padding-right: 18%;
              transition: 0.5s;
@@ -189,7 +191,7 @@
             top: 10%;
             text-align: left;    
             font-size: 0.7vw;
-            color: #251e1e;
+            color: #f9f9f9;
             letter-spacing: 0.2vw;
             padding-left: 35.1%;
             transition: 0.5s;
@@ -243,20 +245,23 @@
         }
 
         @media screen and (max-width:1000px) and (min-width:300px) {
+            .Product_KA1 .swiper-container {margin-top: 20px;}
+            .swiper-slide span{display: none;}
+            .swiper-slide p{font-size: 11px;}
         .Title{height: 400px; transition: 0.5s;}
-        .Product_nav{top: 25%; transition: 0.5s; width:43%;}
-            .Product_nav li{width: 20%;}
+        .Product_nav{top: 25%; transition: 0.5s; width:46%;}
+            .Product_nav li{width: 19%;}
         .Title h2 {top: 32%; transition: 0.5s; margin-left: 2.5%; font-size: 5vw;}
-        .Pro_Title{font-size: 2.2vw;left: 0%; transition: 0.5s; top: 40%;}
-        .pro_subTxt{font-size: 2.0vw; transition: 0.5s; white-space: nowrap; top: 40%;}
+        .Pro_Title{font-size: 2.2vw;left: 3%; transition: 0.5s; top: 40%;}
+        .pro_subTxt{font-size: 2.0vw; transition: 0.5s; white-space: nowrap; top: 40%; left: 3%;}
             
         .Title1{height: 300px; transition: 0.5s;}
         .Title1 h2 {top: 12%; transition: 0.5s; margin-left: 2.5%; font-size: 5vw;}
-        .Pro_Title1{font-size: 2.5vw;transition: 0.5s; top: 40%; text-align: left; text-indent: 1vw;}
-        .pro_subTxt1{font-size: 2.0vw; transition: 0.5s;  top: 40%; padding-left: 1.1%;}
+        .Pro_Title1{font-size: 2.5vw;transition: 0.5s; top: 30%; text-align: left; text-indent: 200px;}
+        .pro_subTxt1{font-size: 2.0vw; transition: 0.5s;  top: 30%; padding-left: 20%;}
             
         .Product_KA1>h2{margin-top: 3%; font-size: 5vw;}
-        .Product_KA1>p{margin-bottom: 1%; font-size: 2.2vw; line-height: 3vw;}
+        .Product_KA1>p{margin-bottom: 1%; font-size: 14px; line-height: 7vw;}
         .swiper-button-next{display: none;}
         .swiper-button-prev{display: none;}
             
