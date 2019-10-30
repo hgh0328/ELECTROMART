@@ -22,12 +22,14 @@
       
     </script>
     <style>
+        .swiper-slide{width: 100%; overflow-x: hidden;}
+        .swiper-slide img{max-width: 500% !important;}
     
     .swiper-container {
           overflow: hidden;
           width: 100%;height: auto;
           max-width: 1920px;
-          max-height: 1090px;
+          max-height: 1100px;
     }
     .swiper-slide {
       text-align: center;
@@ -102,25 +104,25 @@
             
         }
         @media screen and (max-width:599px) and (min-width:300px){
-             .subTxt1{font-size: 1vw; transition: 0.5s;}
+             .subTxt1{font-size: 14px; transition: 0.5s; margin-top: 20px;}
             .More_buuton1{width: 80px; height: 20px; margin-left: 30%; transition: 0.5s; font-weight: normal;}
-            .BT_txt{position: absolute; left: 32%; top: 77.5%; transition: 0.5s; font-weight: normal;}
-            .spin_icon1{position: absolute; top: 60%;left: 34%; transition: 0.5s;}
+            .BT_txt{position: absolute; left: 35%; top: 83.5%; transition: 0.5s; font-weight: normal;}
+            .spin_icon1{position: absolute; top: 69%;left: 34%; transition: 0.5s;}
             .title2{letter-spacing: 0.4vw; transition: 0.5s;}
             .subTxt2{letter-spacing: -0.2VW; transition: 0.5s;}
-            .More_buuton2{font-weight: normal; transition: 0.5s; height: 30px;}
-            .More_buuton3{font-weight: normal; transition: 0.5s; height: 30px;}
+            .More_buuton2{font-weight: normal; transition: 0.5s; height: 30px; width: 80px;}
+            .More_buuton3{font-weight: normal; transition: 0.5s; height: 30px; width: 80px;}
             .spin_icon2{line-height: 22px; transition: 0.5s;}
             .spin_icon3{line-height: 25px; transition: 0.5s;}
             .txt4R{left: 7%;}
-            .number_title4{left: 33.5%; top: -10%;}
-            .More_buuton4L{margin-left: 18%;  height: 30px;}
-            .More_buuton4R{margin-left: 16%;  height: 30px;}
+            .number_title4{left: 27.5%; top: -30%;}
+            .More_buuton4L{margin-left: 18%;  height: 30px; width: 80px;}
+            .More_buuton4R{margin-left: 16%;  height: 30px; width: 80px;}
             .spin_icon4{line-height: 22px;}
             .subTxt4L{letter-spacing: -0.8px}
         }
        @media screen and (max-width:1350px) and (min-width: 1001px){
-           .txt1{top: 30%;}
+           .txt1{top: 20%;}
            .txt2{top: 55%;}
            .txt3{top: 35%;}
            .txt4R{top: 35%;}
@@ -128,11 +130,27 @@
            .More_buuton2{margin-top: 0;}
         }
         @media screen and (max-width:1000px) and (min-width:300px){
-            .txt1{top: 30%;}
-            .txt2{top: 55%;}
-            .txt3{top: 35%;}
-            .txt4R{top: 30%;}
-           .txt4L{top: 35%;}
+            .txt1{top: 20%; left: 10px;}
+            .number1{font-size: 20px;}
+            .number2{font-size: 20px;}
+            .number3{font-size: 20px;}
+            .number4{font-size: 20px;}
+            .num_em{font-size: 28px;}
+            .title1{font-size: 24px;}
+            .title2{font-size: 24px; margin-top: 0;}
+            .title3{font-size: 24px; margin-top: 0;}
+            .title4L{font-size: 24px; margin-top: 0;}
+            .title4R{font-size: 24px; margin-top: 0;}
+            .number_txt{left: 20%; font-size: 24px;}
+            .number_title4{font-size: 18px;}
+            .subTxt2{font-size: 14px;}
+            .subTxt3{font-size: 14px;}
+            .subTxt4L{font-size: 14px;}
+            .subTxt4R{font-size: 14px;}
+            .txt2{top: 25%;}
+            .txt3{top: 25%;}
+            .txt4R{top: 22%;}
+           .txt4L{top: 65%; left: 25%;}
             .More_buuton2{margin-top: 0;}
         } 
         
@@ -148,12 +166,7 @@
         animation-fill-mode: forwards;
         opacity: 1;
     }
-/*
-   .fadeup { animation: fadeup 1s ease; animation-fill-mode: forwards; opacity: 0; }
-    @keyframes fadeup{
-        0%{ transform: translateX(80px); opacity: 0; }  100%{ transform: translateX(0); opacity: 1; }
-    }
-*/
+
     .FR { animation: FR 1s ease; animation-fill-mode: forwards; opacity: 0; }
     @keyframes FR{
         0%{ transform: translateX(100%); opacity: 0; }  100%{ transform: translateX(0); opacity: 1; }
@@ -172,7 +185,7 @@
           <div class="txt1 ani bounceInLeft">
               <strong class="number1"><em class="num_em">01</em> / 04</strong><span class="title1"> 무엇을 하든, 더 심플하게.</span>
               <p class="subTxt1">커넥티드 리빙은 아끼고, 일은 줄여서, 당신이 사랑하는 <br>사람들과는 더 많은 시간을 보내실 수 있도록 도와줍니다.</p>
-              <button class="More_buuton1"><span class="BT_txt">Learn More</span> <i class="fa fa-spinner fa-spin spin_icon1"></i></button>
+              <button class="More_buuton1"><span class="BT_txt">More</span> <i class="fa fa-spinner fa-spin spin_icon1"></i></button>
               
           </div>
 
@@ -184,7 +197,7 @@
           <span class="title2">BESPOKE 냉장고</span>
           <p class="subTxt2">사람마다 모두 다른 라이프스타일 냉장고<br>
                                 내게 딱 맞는 조합과 컬러로 <br>당신에게 맞춘 냉장고를 만나보세요.</p>
-          <button class="More_buuton2"><span>Learn More</span> <i class="fa fa-spinner fa-spin spin_icon2"></i></button>
+          <button class="More_buuton2"><span>More</span> <i class="fa fa-spinner fa-spin spin_icon2"></i></button>
           
       </div>
       </div>
@@ -192,7 +205,7 @@
       <div class="txt3 ani bounceInRight">
           <strong class="number3"><em class="num_em">03</em> / 04</strong><span class="title3">세상을 바꿀 차세대 노트북</span>
           <p class="subTxt3">노트북의 한계를 뛰어넘는 새로운 모바일 PC <br>세상을 바꿀 차세대 노트북을 지금 만나보세요.</p>
-          <button class="More_buuton3"><span>Learn More</span> <i class="fa fa-spinner fa-spin spin_icon3"></i></button>
+          <button class="More_buuton3"><span>More</span> <i class="fa fa-spinner fa-spin spin_icon3"></i></button>
           
       </div>
       </div>
@@ -204,13 +217,13 @@
               <span class="title4R">새로운 시대의 스마트폰</span>
               <p class="subTxt4R">손안에 펼쳐지는 미래를 만나보세요.</p>
               <p class="subTxt4R">5G로 만나는 새로운 세계!</p>
-              <button class="More_buuton4R"><span>Learn More</span> <i class="fa fa-spinner fa-spin spin_icon4"></i></button>
+              <button class="More_buuton4R"><span>More</span> <i class="fa fa-spinner fa-spin spin_icon4"></i></button>
             </div>
             <div class="txt4L ani bounceInRight"><span class="title4L">인생을 바꾸는 작은 습관</span>
                   <p class="subTxt4L">온종일 부족함 없는 파워풀한 대용량 배터리</p>
                   <p class="subTxt4L">즐거움이 배가 되는 쿼드 카메라 경험해보지</p>
                   <p class="subTxt4L">못한 놀라운 속도를 선사합니다.</p>
-                  <button class="More_buuton4L"><span>Learn More</span> <i class="fa fa-spinner fa-spin spin_icon4"></i></button>
+                  <button class="More_buuton4L"><span>More</span> <i class="fa fa-spinner fa-spin spin_icon4"></i></button>
             </div>
       </div>
       </div>
@@ -241,9 +254,9 @@
         speed: 500,
         spaceBetween: 1,
         loop: true,
-        autoplay: {
-        delay: 5500,
-        },
+//        autoplay: {
+//        delay: 5500,
+//        },
         pagination: {
             el: '.swiper-pagination',
             type: 'progressbar',
