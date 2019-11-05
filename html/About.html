@@ -197,7 +197,7 @@
         .c1_list_img5.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
         .c1_list_img6.on{z-index: 999; top: 0; left: 225%; box-shadow: 0px 0px 200px #000;  transition: 0.5s; transform: scale(2); background: #000;}
         
-        .img_on_bg{position: absolute; width: 100%; height: 233%; background: #000; z-index: 11; top: 59.2%; left: 0; opacity: 0.8; padding-bottom: 100%; cursor: default; filter: blur(15px); transition: 0.5s;}
+        .img_on_bg{position: absolute; width: 100%; height: 150%; background: #000; z-index: 12; top: 60%; left: 0; opacity: 0.8; cursor: default; filter: blur(15px); transition: 0.5s;}
         
         /*About c2*/
         .About_c2_list{width: 100%; background: #eee; overflow: hidden; margin-bottom: 10%;}
@@ -271,10 +271,10 @@
             .About_nav li {font-size: 2vw; line-height: 2vw;}
             .Title h2 {font-size: 4.5vw; padding-left: 3%;}
             .Title .fa-chevron-right {font-size: 1.5vw; line-height: 2vw;}
-            .About_c1_txt{width: 80%;}
-            .About_c1_txt .c1_txt_r{padding-left: 3%; padding-top: 7%;}
-            .About_c1_txt .c1_txt_r h4{font-size: 16px;}
-            .About_c1_txt .c1_txt_r .c1_txt_rs2{font-size: 11px; line-height: normal;}
+            .About_c1_txt{width: 100%;}
+            .About_c1_txt .c1_txt_r{padding-left: 2%; min-width: 200px;}
+            .About_c1_txt .c1_txt_r h4{font-size: 3vw;}
+            .About_c1_txt .c1_txt_r .c1_txt_rs2{font-size: 1vw; line-height: normal;}
             
             
             
@@ -377,13 +377,12 @@
                 $(".c1_list_img6").removeClass("on");                
             });
         });
-
     </script>
 </head>
 
 <body>
     <!-- 헤더구역    -->
-    <div id="wrap" style="overflow-x: hidden;">
+    <div id="wrap">
         <header></header>
 
         <div id="transcroller-body" class="aos-all">
@@ -465,7 +464,7 @@
 
 
 
-        <!--footer-->
+       <!--footer-->
         <footer></footer>
     </div>
     
